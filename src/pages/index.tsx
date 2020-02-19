@@ -8,7 +8,6 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 const BlackSquare = styled.div({
-  width: '100vh',
   marginRight: '150px',
   backgroundColor: 'black',
   height: '45vh',
