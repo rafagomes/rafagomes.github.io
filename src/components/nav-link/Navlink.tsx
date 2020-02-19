@@ -5,7 +5,10 @@ import { css } from "@emotion/core";
 const linkStyle = css({
     color: 'black',
     fontSize: '23px',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    fontFamily: 'Roboto',
+    fontWeight: 300,
+    fontsize: '24px'
 });
 
 interface Props {

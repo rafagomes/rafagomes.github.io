@@ -11,9 +11,6 @@ interface Props {
   menuLinks: []
 }
 
-
-
-
 function Header({ menuLinks }:Props) {
 
   const renderMenu = () => {

@@ -1,2 +1,2 @@
-import NavLink from './nav-link';
+import NavLink from './Navlink';
 export default NavLink;
