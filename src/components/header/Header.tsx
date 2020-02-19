@@ -1,5 +1,20 @@
 import React from "react"
 import NavLink from '../nav-link';
+import styled from "@emotion/styled";
+
+
+const Li = styled.li({
+  listStyle: 'none'
+});
+
+const Ul = styled.ul({
+  maxWidth: '800px',
+  paddingLeft: 0,
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-around'
+});
+
 
 interface Linkprops {
   link: string,
@@ -17,16 +32,16 @@ function Header({ menuLinks }:Props) {
     return menuLinks.map((linkProps:Linkprops) => {
       const {link, name, ...otherProps} = linkProps;
 
-      return <li key={link}><NavLink to={link} {...otherProps}>{name}</NavLink></li>
+      return <Li key={link}><NavLink to={link} {...otherProps}>{name}</NavLink></Li>
     });
   }
 
   return (
     <header>
       <nav>
-        <ul>
+        <Ul>
           {renderMenu()}
-        </ul>
+        </Ul>
       </nav>
     </header>
   );
