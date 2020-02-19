@@ -1,8 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Rafa Gomes digital resume.`,
+    description: `Description.`,
+    author: `@rafagomes`,
+    menuLinks: [
+      { name: 'Home', link: '/'},
+      { name: 'Resume', link: '/resume'},
+      { name: 'Linkedin', link: 'http://linkedin', external: true},
+      { name: 'Twitter', link: 'http://twitter', external: true},
+      { name: 'Contact', link: '/contact'},
+    ]
   },
   plugins: [
     `gatsby-plugin-emotion`,
