@@ -10,16 +10,17 @@ interface Props {
     children: any
 }
 
-const Footer = styled.footer({
-    position: "fixed",
-    right: "10px",
-    bottom: "10px",
-})
+const Footer = styled.footer`
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+`
 
-const Main = styled.main({
-    display: "flex",
-    flexDirection: "column",
-})
+const Main = styled.main`
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+`
 
 const MainTemplate = ({ children }: Props) => {
     const data = useStaticQuery(graphql`

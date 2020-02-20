@@ -7,18 +7,17 @@ import MainTemplate from "../templates/main"
 import SEO from "../components/seo"
 import Greeting from "../components/greeting"
 
-const BlackSquare = styled.div({
-    marginRight: "150px",
-    backgroundColor: "black",
-    height: "45vh",
-    justifySelf: "flex-end",
-    alignSelf: "left",
-})
+const BlackSquare = styled.div`
+    margin-right: 150px;
+    background-color: black;
+    height: 45vh;
+    align-self: 100%;
+`
 
-const LinkStyle = css({
-    color: "white",
-    textDecoration: "none",
-})
+const LinkStyle = css`
+    color: white;
+    textdecoration: none;
+`
 
 const Resume = () => (
     <MainTemplate>
