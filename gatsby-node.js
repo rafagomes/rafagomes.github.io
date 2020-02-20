@@ -1,7 +1,7 @@
 const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql }) => {
-    const { createPage } = actions;
+    const { createPage } = actions
 
     const result = await graphql(`
         {
@@ -16,7 +16,6 @@ exports.createPages = async ({ actions, graphql }) => {
             }
         }
     `)
-    
 
     if (result.errors) {
         console.error(result.errors)

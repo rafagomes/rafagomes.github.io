@@ -1,2 +1,2 @@
-import Greeting from './Greeting';
-export default Greeting;
+import Greeting from "./Greeting"
+export default Greeting
