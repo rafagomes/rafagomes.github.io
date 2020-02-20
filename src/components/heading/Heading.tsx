@@ -1,12 +1,15 @@
 import React from "react"
+import { css } from "@emotion/core"
+
+type Rank = "1" | "2" | "3" | "4" | "5" | "6"
 
 interface Props {
-    rank: string
+    rank: Rank
     children: string
 }
 
 function Heading({ rank, children, ...otherProps }: Props) {
-    const tag = parseInt(rank) > 6 ? "h6" : `h${rank}`
+    const tag = `h${rank}`
 
     return React.createElement(tag, otherProps, children)
 }

@@ -4,15 +4,11 @@ import styled from "@emotion/styled"
 import "normalize.css"
 
 import Header from "../../components/header"
+import Global from "../../styles/base"
 
 interface Props {
     children: any
 }
-
-const Site = styled.div({
-    fontFamily: "Roboto",
-    fontWeight: 400,
-})
 
 const Footer = styled.footer({
     position: "fixed",
@@ -44,7 +40,7 @@ const MainTemplate = ({ children }: Props) => {
     const { menuLinks } = data.site.siteMetadata
 
     return (
-        <Site>
+        <Global>
             <Header menuLinks={menuLinks} />
             <Main>{children}</Main>
             <Footer>
@@ -59,7 +55,7 @@ const MainTemplate = ({ children }: Props) => {
                     </ul>
                 </nav>
             </Footer>
-        </Site>
+        </Global>
     )
 }
 
