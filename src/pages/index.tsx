@@ -8,11 +8,13 @@ import SEO from "../components/seo"
 import Greeting from "../components/greeting"
 import ArrowLink from "../components/arrowLink"
 
+let resumeActive = false
+
 const BlackSquare = styled.div`
     display: flex;
     margin-right: 150px;
     background-color: black;
-    height: 55%;
+    height: ${resumeActive ? "100%" : "55%"};
     align-items: flex-end;
     justify-content: center;
 `
@@ -27,20 +29,31 @@ const LinkStyle = css`
     font-size: 24px;
 `
 
-const Home = () => (
-    <MainTemplate>
-        <SEO title="Home" />
-        <Greeting
-            greeting="Nice to meet you!"
-            presentation="I'm Rafa Gomes, a developer"
-        />
-        <BlackSquare>
-            <Link css={LinkStyle} to="/resume">
-                Resume
-                <ArrowLink />
-            </Link>
-        </BlackSquare>
-    </MainTemplate>
-)
+function Home() {
+    const goToResume = (event: React.MouseEvent) => {
+        event.preventDefault()
+        resumeActive = true
+    }
+
+    return (
+        <MainTemplate>
+            <SEO title="Home" />
+            <Greeting
+                greeting="Nice to meet you!"
+                presentation="I'm Rafa Gomes, a developer."
+            />
+            <BlackSquare>
+                <Link
+                    onClick={event => goToResume(event)}
+                    css={LinkStyle}
+                    to="/resume"
+                >
+                    Resume
+                    <ArrowLink />
+                </Link>
+            </BlackSquare>
+        </MainTemplate>
+    )
+}
 
 export default Home
