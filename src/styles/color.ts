@@ -1,9 +1,9 @@
 interface Color {
-    backgroundWhite: string
-    backgroundBlack: string
+    black: string
+    grey: string
 }
 
 export const Color: Color = {
-    backgroundWhite: "white",
-    backgroundBlack: "black",
+    black: "black",
+    grey: "#858585",
 }

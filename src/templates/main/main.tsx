@@ -5,6 +5,7 @@ import "normalize.css"
 
 import Header from "../../components/header"
 import Global from "../../styles/base"
+import LanguageSelector from "../../components/language-selector"
 
 interface Props {
     children: any
@@ -12,8 +13,9 @@ interface Props {
 
 const Footer = styled.footer`
     position: fixed;
-    right: 10px;
-    bottom: 10px;
+    right: 30px;
+    bottom: 30px;
+    width: 90px;
 `
 
 const Main = styled.main`
@@ -46,16 +48,7 @@ const MainTemplate = ({ children }: Props) => {
             <Header menuLinks={menuLinks} />
             <Main>{children}</Main>
             <Footer>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="https://www.gatsbyjs.org">EN</a>
-                        </li>
-                        <li>
-                            <a href="https://www.gatsbyjs.org">PT</a>
-                        </li>
-                    </ul>
-                </nav>
+                <LanguageSelector />
             </Footer>
         </Global>
     )
