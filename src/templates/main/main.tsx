@@ -18,8 +18,9 @@ const Footer = styled.footer`
 
 const Main = styled.main`
     display: flex;
-    height: 100%;
     flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 `
 
 const MainTemplate = ({ children }: Props) => {

@@ -42,16 +42,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-mdx`,
-            options: {
-                defaultLayouts: {
-                    default: require.resolve(
-                        `./src/templates/resume/resume.tsx`
-                    ),
-                },
-            },
-        },
-        {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [

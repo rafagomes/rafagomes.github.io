@@ -10,6 +10,16 @@ export default ({ children }: any) => (
                     height: 100%;
                 }
 
+                #___gatsby {
+                    height: 100%;
+                }
+
+                #gatsby-focus-wrapper {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+
                 h1,
                 h2,
                 h3,

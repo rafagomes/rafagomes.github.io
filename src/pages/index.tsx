@@ -10,16 +10,15 @@ import Greeting from "../components/greeting"
 const BlackSquare = styled.div`
     margin-right: 150px;
     background-color: black;
-    height: 45vh;
-    align-self: 100%;
+    height: 55%;
 `
 
 const LinkStyle = css`
     color: white;
-    textdecoration: none;
+    text-decoration: none;
 `
 
-const Resume = () => (
+const Home = () => (
     <MainTemplate>
         <SEO title="Home" />
         <Greeting
@@ -34,4 +33,4 @@ const Resume = () => (
     </MainTemplate>
 )
 
-export default Resume
+export default Home
