@@ -6,7 +6,6 @@ module.exports = {
         menuLinks: [
             { name: "Home", link: "/" },
             { name: "Resume", link: "/resume" },
-            { name: "Contact", link: "/contact" },
             {
                 name: "Linkedin",
                 link: "https://www.linkedin.com/in/rafagomesdev/",
@@ -64,6 +63,7 @@ module.exports = {
                             },
                         },
                     },
+                    "gatsby-remark-containers",
                 ],
             },
         },

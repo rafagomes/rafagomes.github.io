@@ -3,7 +3,19 @@ title: Rafael Gomes resume
 path: /resume
 ---
 
-## Profile
+:::div resume
+
+:::aside resume-sidebar
+
+:::div name-block
+
+# Rafael Gomes
+
+## web developer
+
+:::
+
+### Profile
 
 [[area]]
 | I've developed my entire life
@@ -14,7 +26,7 @@ path: /resume
 | as a professional and
 | human being.
 
-## Hard Skills
+### Hard Skills
 
 [[area]]
 | - Javascript, Typescript
@@ -31,12 +43,36 @@ path: /resume
 | - AWS EC2 management
 | - Agile, Kanban, Scrum
 | - Ethical hacking principles
+:::
 
-## Experience
+:::div resume-main
+
+### Experience
 
 [[area]]
-| ### TECHNOLOGY MANAGER
-| #### ACCENTURE INTERACTIVE | JAN 2018 - PRESENT
+| #### TECHNOLOGY MANAGER  
+| ACCENTURE INTERACTIVE | JAN 2018 - PRESENT
+| - **Core:** Team management and leadership
+| - **Differentials:** Technical leadership in Front-end projects like TIM,
+| - **Clients:** Porto Seguro[large | insurance] and GOL[large | airline]
+
+[[area]]
+| #### TECHNOLOGY MANAGER  
+| ACCENTURE INTERACTIVE | JAN 2018 - PRESENT
+| - **Core:** Team management and leadership
+| - **Differentials:** Technical leadership in Front-end projects like TIM,
+| - **Clients:** Porto Seguro[large | insurance] and GOL[large | airline]
+
+[[area]]
+| #### TECHNOLOGY MANAGER  
+| ACCENTURE INTERACTIVE | JAN 2018 - PRESENT
+| - **Core:** Team management and leadership
+| - **Differentials:** Technical leadership in Front-end projects like TIM,
+| - **Clients:** Porto Seguro[large | insurance] and GOL[large | airline]
+
+[[area]]
+| #### TECHNOLOGY MANAGER  
+| ACCENTURE INTERACTIVE | JAN 2018 - PRESENT
 | - **Core:** Team management and leadership
 | - **Differentials:** Technical leadership in Front-end projects like TIM,
 | - **Clients:** Porto Seguro[large | insurance] and GOL[large | airline]
@@ -47,24 +83,5 @@ path: /resume
 | - **Core:** Team management and leadership
 | - **Differentials:** Technical leadership in Front-end projects like TIM,
 | - **Clients:** Porto Seguro[large | insurance] and GOL[large | airline]
-
-[[area]]
-| ### TECHNOLOGY MANAGER
-| #### ACCENTURE INTERACTIVE | JAN 2018 - PRESENT
-| - **Core:** Team management and leadership
-| - **Differentials:** Technical leadership in Front-end projects like TIM,
-| - **Clients:** Porto Seguro[large | insurance] and GOL[large | airline]
-
-[[area]]
-| ### TECHNOLOGY MANAGER
-| #### ACCENTURE INTERACTIVE | JAN 2018 - PRESENT
-| - **Core:** Team management and leadership
-| - **Differentials:** Technical leadership in Front-end projects like TIM,
-| - **Clients:** Porto Seguro[large | insurance] and GOL[large | airline]
-
-[[area]]
-| ### TECHNOLOGY MANAGER
-| #### ACCENTURE INTERACTIVE | JAN 2018 - PRESENT
-| - **Core:** Team management and leadership
-| - **Differentials:** Technical leadership in Front-end projects like TIM,
-| - **Clients:** Porto Seguro[large | insurance] and GOL[large | airline]
+:::
+:::

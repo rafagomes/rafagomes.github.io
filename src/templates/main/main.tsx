@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import "normalize.css"
 
@@ -9,7 +9,7 @@ import LanguageSelector from "../../components/language-selector"
 
 interface Props {
     children: any
-    data: any
+    isMarkDown: Boolean
 }
 
 const Footer = styled.footer`
@@ -25,46 +25,43 @@ const Main = styled.main`
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
-    overflow: hidden;
     margin-top: 120px;
     height: calc(100vh - 120px);
 `
 
-export default function MainTemplate({ children, data }: any) {
-    console.log(data)
-    const { markdownRemark } = data
-    const { html } = markdownRemark
+export default function MainTemplate({ children, isMarkDown }: any) {
+    const data = useStaticQuery(graphql`
+        query SiteTitleQuery {
+            site {
+                siteMetadata {
+                    title
+                    menuLinks {
+                        name
+                        link
+                        external
+                    }
+                }
+            }
+        }
+    `)
+
     const { menuLinks } = data.site.siteMetadata
 
     return (
         <Global>
             <Header menuLinks={menuLinks} />
-            <Main dangerouslySetInnerHTML={{ __html: html }}>{children}</Main>
+            <Main
+                style={
+                    isMarkDown
+                        ? { overflow: "visible" }
+                        : { overflow: "hidden" }
+                }
+            >
+                {children}
+            </Main>
             <Footer>
                 <LanguageSelector />
             </Footer>
         </Global>
     )
 }
-
-export const pageQuery = graphql`
-    query($path: String!) {
-        markdownRemark(frontmatter: { path: { eq: $path } }) {
-            html
-            frontmatter {
-                path
-                title
-            }
-        }
-        site {
-            siteMetadata {
-                title
-                menuLinks {
-                    name
-                    link
-                    external
-                }
-            }
-        }
-    }
-`

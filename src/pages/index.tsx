@@ -53,7 +53,7 @@ function Home() {
             targets: greetingRef.current,
             opacity: 0,
             marginTop: "0%",
-            duration: 500,
+            duration: 300,
         })
     }
     return (
@@ -75,7 +75,7 @@ function Home() {
                         trigger: transition,
                     }}
                     entry={{
-                        delay: 2,
+                        delay: 2.5,
                     }}
                 >
                     Resume
