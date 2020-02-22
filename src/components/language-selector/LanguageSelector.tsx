@@ -1,4 +1,4 @@
-import React from "react"
+import React, { ReactElement } from "react"
 import { css } from "@emotion/core"
 import { Color } from "../../styles/color"
 
@@ -23,7 +23,7 @@ const activeLanguage = css`
     color: ${Color.black};
 `
 
-function LanguageSelector() {
+function LanguageSelector(): ReactElement {
     return (
         <nav>
             <ul css={listContainer}>

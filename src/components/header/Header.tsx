@@ -1,6 +1,7 @@
 import React from "react"
 import NavLink from "../nav-link"
 import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
 const Li = styled.li`
     list-style: none;
@@ -13,6 +14,14 @@ const Ul = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+`
+
+const headerStyle = css`
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    z-index: 10;
 `
 
 interface Linkprops {
@@ -41,7 +50,7 @@ function Header({ menuLinks }: Props) {
     }
 
     return (
-        <header>
+        <header css={headerStyle}>
             <nav>
                 <Ul>{renderMenu()}</Ul>
             </nav>

@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Wrapper = styled.div`
-    margin: 3% 0 3% 50px;
+    margin-left: 50px;
 `
 
 const h2Style = css`

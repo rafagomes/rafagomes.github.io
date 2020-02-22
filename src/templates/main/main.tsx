@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import styled from "@emotion/styled"
 import "normalize.css"
 
@@ -9,6 +9,7 @@ import LanguageSelector from "../../components/language-selector"
 
 interface Props {
     children: any
+    data: any
 }
 
 const Footer = styled.footer`
@@ -20,33 +21,25 @@ const Footer = styled.footer`
 
 const Main = styled.main`
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
+    overflow: hidden;
+    margin-top: 120px;
+    height: calc(100vh - 120px);
 `
 
-const MainTemplate = ({ children }: Props) => {
-    const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                    menuLinks {
-                        name
-                        link
-                        external
-                    }
-                }
-            }
-        }
-    `)
-
+export default function MainTemplate({ children, data }: any) {
+    console.log(data)
+    const { markdownRemark } = data
+    const { html } = markdownRemark
     const { menuLinks } = data.site.siteMetadata
 
     return (
         <Global>
             <Header menuLinks={menuLinks} />
-            <Main>{children}</Main>
+            <Main dangerouslySetInnerHTML={{ __html: html }}>{children}</Main>
             <Footer>
                 <LanguageSelector />
             </Footer>
@@ -54,4 +47,24 @@ const MainTemplate = ({ children }: Props) => {
     )
 }
 
-export default MainTemplate
+export const pageQuery = graphql`
+    query($path: String!) {
+        markdownRemark(frontmatter: { path: { eq: $path } }) {
+            html
+            frontmatter {
+                path
+                title
+            }
+        }
+        site {
+            siteMetadata {
+                title
+                menuLinks {
+                    name
+                    link
+                    external
+                }
+            }
+        }
+    }
+`

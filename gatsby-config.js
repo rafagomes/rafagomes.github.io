@@ -6,14 +6,23 @@ module.exports = {
         menuLinks: [
             { name: "Home", link: "/" },
             { name: "Resume", link: "/resume" },
-            { name: "Linkedin", link: "http://linkedin", external: true },
-            { name: "Twitter", link: "http://twitter", external: true },
             { name: "Contact", link: "/contact" },
+            {
+                name: "Linkedin",
+                link: "https://www.linkedin.com/in/rafagomesdev/",
+                external: true,
+            },
+            {
+                name: "Twitter",
+                link: "https://twitter.com/rafagomes_dev",
+                external: true,
+            },
         ],
     },
     plugins: [
         `gatsby-plugin-emotion`,
         `gatsby-plugin-typescript`,
+        `gatsby-plugin-transition-link`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,

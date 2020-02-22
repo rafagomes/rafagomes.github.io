@@ -1,10 +1,13 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
+import animations from "./animations"
 
 export default ({ children }: any) => (
     <>
         <Global
             styles={css`
+                ${animations}
+
                 body,
                 html {
                     height: 100%;
