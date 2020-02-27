@@ -4,12 +4,11 @@ import {Global} from '@emotion/core'
 
 import BaseStyle from './styles/base'
 
-
 function App() {
     return (
         <>
             <Global styles={BaseStyle} />
-            <div>ok</div>
+            <p>ok</p>
         </>
     )
 }
