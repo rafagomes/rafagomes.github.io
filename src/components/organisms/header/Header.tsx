@@ -1,20 +1,7 @@
 import React from "react"
+import List from "../../molecules/list"
 import NavLink from "../../atoms/navlink"
-import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-
-const Li = styled.li`
-    list-style: none;
-`
-
-const Ul = styled.ul`
-    max-width: 650px;
-    margin: 50px 50px 0 50px;
-    padding-left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-`
 
 const headerStyle = css`
     background: white;
@@ -24,35 +11,24 @@ const headerStyle = css`
     z-index: 10;
 `
 
-interface Linkprops {
-    link: string
-    name: string
-    external: Boolean
-}
-
-interface Props {
-    menuLinks: []
-}
-
-function Header({ menuLinks }: Props) {
+function Header() {
     const renderMenu = () => {
-        return menuLinks.map((linkProps: Linkprops) => {
-            const { link, name, ...otherProps } = linkProps
-
-            return (
-                <Li key={link}>
-                    <NavLink to={link} {...otherProps}>
-                        {name}
-                    </NavLink>
-                </Li>
-            )
-        })
+        return (
+            <List>
+                <li>
+                    <NavLink to="/">Home</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/resume">Resume</NavLink>
+                </li>
+            </List>
+        )
     }
 
     return (
         <header css={headerStyle}>
             <nav>
-                <Ul>{renderMenu()}</Ul>
+                <List>{renderMenu()}</List>
             </nav>
         </header>
     )

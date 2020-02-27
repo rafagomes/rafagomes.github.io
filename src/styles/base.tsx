@@ -1,12 +1,12 @@
 import { css } from "@emotion/core"
+import "normalize.css"
 
 export default css`
-    
     body,
     html {
         height: 100%;
     }
-    
+
     h1,
     h2,
     h3,
@@ -23,6 +23,5 @@ export default css`
     }
 
     body {
-        background: red;
     }
 `

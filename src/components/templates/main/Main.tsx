@@ -1,10 +1,12 @@
 import React from "react"
 import { Route, RouteProps } from "react-router-dom"
 
+import Header from "../../organisms/header"
+
 function MainTemplate(props: RouteProps) {
     return (
         <>
-            <h1>Main Template</h1>
+            <Header />
             <Route {...props} />
         </>
     )
