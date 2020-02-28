@@ -27,9 +27,7 @@ function Header() {
 
     return (
         <header css={headerStyle}>
-            <nav>
-                <List>{renderMenu()}</List>
-            </nav>
+            <nav>{renderMenu()}</nav>
         </header>
     )
 }

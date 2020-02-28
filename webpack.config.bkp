@@ -1,0 +1,45 @@
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+
+module.exports = {
+    mode: "development",
+    devtool: "source-map", //debug
+    devServer: {
+        contentBase: "./dist",
+    },
+    entry: "./src/index.tsx",
+    module: {
+        rules: [
+            { test: /\.tsx?$/, use: "babel-loader", exclude: /node_modules/ },
+            {
+                test: /\.css$/,
+                use: [{ loader: "style-loader" }, { loader: "css-loader" }],
+            },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader",
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader",
+                    },
+                ],
+            },
+        ],
+    },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"],
+    },
+    externals: {
+        react: "React",
+        "react-dom": "ReactDOM",
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./public/index.html",
+            filename: "./index.html",
+        }),
+    ],
+}

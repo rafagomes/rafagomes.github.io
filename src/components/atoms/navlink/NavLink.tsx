@@ -1,12 +1,11 @@
-import React from "react"
-import { css } from "@emotion/core"
+import { css, jsx } from "@emotion/core"
 import { Link } from "react-router-dom"
 
-const linkStyle = css({
-    color: "black",
-    textDecoration: "none",
-    fontsize: "24px",
-})
+const linkStyle = css`
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+`
 
 interface Props {
     children: string
@@ -20,7 +19,13 @@ function NavLink(props: Props) {
     const renderLink = () => {
         if (external) {
             return (
-                <a css={linkStyle} href={to} {...otherProps} target="_blank">
+                <a
+                    css={linkStyle}
+                    href={to}
+                    {...otherProps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {children}
                 </a>
             )
