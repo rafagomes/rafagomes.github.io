@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "@emotion/styled";
 
 const ArrowDown = styled.span`
@@ -11,7 +11,7 @@ const ArrowDown = styled.span`
     border-top: 10px solid white;
 `;
 
-function Arrow() {
+function Arrow(): ReactElement {
     return <ArrowDown />;
 }
 

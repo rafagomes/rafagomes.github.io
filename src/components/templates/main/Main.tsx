@@ -1,8 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, ReactElement } from "react";
 import { Route, RouteProps } from "react-router-dom";
+import styled from "@emotion/styled";
 import Header from "../../organisms/header";
+import LanguageSelector from "../../organisms/language-selector";
 
-function MainTemplate(props: RouteProps) {
+const Footer = styled.footer`
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 90px;
+`;
+
+function MainTemplate(props: RouteProps): ReactElement {
     let menuLinks = [
         { name: "Home", link: "/" },
         { name: "Resume", link: "/resume" },
@@ -22,6 +31,9 @@ function MainTemplate(props: RouteProps) {
         <Fragment>
             <Header menuLinks={menuLinks} />
             <Route {...props} />
+            <Footer>
+                <LanguageSelector />
+            </Footer>
         </Fragment>
     );
 }

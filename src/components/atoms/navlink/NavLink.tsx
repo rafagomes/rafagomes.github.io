@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import { css } from "@emotion/core";
 
@@ -17,7 +17,7 @@ interface Props {
     external?: Boolean;
 }
 
-function NavLink(props: Props) {
+function NavLink(props: Props): ReactElement {
     const { children, to, external, ...otherProps } = props;
 
     const renderLink = () => {

@@ -4,8 +4,10 @@ import { Global } from "@emotion/core";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import BaseStyle from "./styles/Base";
-import Home from "./components/pages/home";
+
 import MainTemplate from "./components/templates/main";
+import Home from "./components/pages/home";
+import Resume from "./components/pages/resume";
 
 function App() {
     return (
@@ -13,7 +15,8 @@ function App() {
             <Global styles={BaseStyle} />
             <BrowserRouter>
                 <Switch>
-                    <MainTemplate path="/" exact={true} component={Home} />
+                    <MainTemplate path="/" exact component={Home} />
+                    <MainTemplate path="/resume" exact component={Resume} />
                 </Switch>
             </BrowserRouter>
         </>
