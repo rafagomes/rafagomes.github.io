@@ -2,6 +2,8 @@ import React, { ReactElement, Fragment, useContext } from "react";
 import styled from "@emotion/styled";
 import resumeContent from "../../../resume-content/resume.json";
 import { LanguageContext } from "../../../contexts/LanguageContext";
+import Heading from "../../atoms/heading";
+import List from "../../molecules/list";
 
 interface TypeSidebar {
     title: string;
@@ -29,23 +31,16 @@ const BlackSquare = styled.div`
 `;
 
 function Resume(): ReactElement {
-    // const { en, pt } = resumeContent;
     const { language } = useContext(LanguageContext);
 
-    const renderList = (list: []) => (
-        <ul>
-            {list.map((item, index) => (
-                <li key={index}>{item}</li>
-            ))}
-        </ul>
-    );
+    const renderList = (list: []) => <List items={list} />;
 
     const renderText = (item: any) => <p>{item.text}</p>;
 
     const renderSidebar = () => {
         return resumeContent[language].sidebar.map((item: TypeSidebar, index: number) => (
             <Fragment key={index}>
-                <h2>{item.title}</h2>
+                <Heading rank="2">{item.title}</Heading>
                 {Array.isArray(item.content) ? renderList(item.content) : renderText(item.content)}
             </Fragment>
         ));
@@ -54,8 +49,8 @@ function Resume(): ReactElement {
     const renderMainContent = (mainContent: Array<MainContent>) => {
         return mainContent.map((item: MainContent, index: number) => (
             <div key={index}>
-                <h3>{item.title}</h3>
-                <h4>{item.subtitle}</h4>
+                <Heading rank="3">{item.title}</Heading>
+                <Heading rank="4">{item.subtitle}</Heading>
                 <p>{item.date}</p>
                 {item.description ? <p>{item.description}</p> : ""}
             </div>
@@ -65,7 +60,7 @@ function Resume(): ReactElement {
     const renderMain = () => {
         return resumeContent[language].main.map((item: Main, index: number) => (
             <Fragment key={index}>
-                <h2>{item.title}</h2>
+                <Heading rank="2">{item.title}</Heading>
                 {renderMainContent(item.content)}
             </Fragment>
         ));
@@ -75,8 +70,8 @@ function Resume(): ReactElement {
         <BlackSquare className="resume">
             <aside className="sidebar">
                 <div className="name-block">
-                    <h1>Rafa Gomes</h1>
-                    <h2>web developer</h2>
+                    <Heading rank="1">Rafa Gomes</Heading>
+                    <Heading rank="2">web developer</Heading>
                 </div>
                 {renderSidebar()}
             </aside>

@@ -1,10 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 
 import Greeting from "../../molecules/greetings";
 import ArrowLink from "../../atoms/arrow";
+import resumeContent from "../../../resume-content/resume.json";
+import { LanguageContext } from "../../../contexts/LanguageContext";
 
 const LinkStyle = css`
     display: flex;
@@ -30,12 +32,15 @@ const BlackSquare = styled.div`
 `;
 
 function Home() {
+    const { language } = useContext(LanguageContext);
+    const { title, subtitle, linkToResume } = resumeContent[language].greetings;
+
     return (
         <Fragment>
-            <Greeting key="Greeting" greeting="Nice to meet you!" presentation="I'm Rafa Gomes, a developer." />
+            <Greeting key="Greeting" presentation={title} greeting={subtitle} />
             <BlackSquare>
                 <Link css={LinkStyle} to="/resume">
-                    Resume
+                    {linkToResume}
                     <ArrowLink />
                 </Link>
             </BlackSquare>

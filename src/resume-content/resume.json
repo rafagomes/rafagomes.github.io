@@ -1,5 +1,10 @@
 {
     "en": {
+        "greetings": {
+            "title": "I'm Rafa Gomes, a developer",
+            "subtitle": "Nice to meet you!",
+            "linkToResume": "Resume"
+        },
         "menuLinks": [
             { "name": "Home", "link": "/" },
             { "name": "Resume", "link": "/resume" },
@@ -22,7 +27,7 @@
             {
                 "title": "Profile",
                 "content": {
-                    "text": "I've developed my entire life and I'm searching for a remote position in the field of Front-end or Full Stack to apply my skills and continue my growth as a professional and human being."
+                    "text": "I've been working with software development my entire life. In the past 13 years I have worked with amazing teammates delivering complex projects for some huge clients like Verizon, Coca-cola, American Express and top 10 major companies in Brazil. Programming is my passion."
                 }
             },
             {
@@ -51,20 +56,50 @@
                     {
                         "title": "Technology Manager",
                         "subtitle": "Accenture",
-                        "date": "Jan 18 - present",
-                        "description": "Team management and leadership"
+                        "date": "Jan 2018 - present",
+                        "description": "My role at Accenture is a combination between team management and technical leadership, with a goal to drive our team to deliver excelent products for our clients."
                     },
                     {
-                        "title": "Technology Manager",
-                        "subtitle": "Accenture",
-                        "date": "Jan 18 - present",
-                        "description": "Team management and leadership"
+                        "title": "Technology Director",
+                        "subtitle": "Tropikal",
+                        "date": "Jan 2018 - present",
+                        "description": "Tropikal is part of Accenture and here I have the director's responsabilities about the group."
                     },
                     {
-                        "title": "Technology Manager",
-                        "subtitle": "Accenture",
-                        "date": "Jan 18 - present",
-                        "description": "Team management and leadership"
+                        "title": "Technology Lead",
+                        "subtitle": "Huge inc.",
+                        "date": "Jan 2017 - Dec 2017",
+                        "description": "This was a mixed role, part management and technical. Some of the featured participations were two major projects for banks."
+                    },
+                    {
+                        "title": "Software development manager",
+                        "subtitle": "Parafernalia Interativa",
+                        "date": "Mar 2013 - Jul 2015",
+                        "description": "Leading and developing applications for our clients. Here I was responsible for sales, business management and technical scope. Not ideal, but worked for some time."
+                    },
+                    {
+                        "title": "Senior Front-end developer",
+                        "subtitle": "Huge inc.",
+                        "date": "Sep 2011 - Mar 2013",
+                        "description": "Working at Huge is always a great experience. I was responsible for programming some beautiful user centric projects and outstandign prototypes."
+                    },
+                    {
+                        "title": "Senior Web developer",
+                        "subtitle": "6d",
+                        "date": "Sep 2010 - Sep 2011",
+                        "description": "Some of my most enjoyable work was made here. Flash and Javascript for fashion companies, focused on design and style. At 6d I started to work more seriously with backend, CMS like Drupal and Wordpress."
+                    },
+                    {
+                        "title": "Web developer",
+                        "subtitle": "Kaus Midia",
+                        "date": "Jun 2009 - Sep 2010",
+                        "description": "Development in a fast pace, focused on extreme delivery. At Kaus I was able to create more proccess, organization and code reusability."
+                    },
+                    {
+                        "title": "Flash Developer",
+                        "subtitle": "Some companies",
+                        "date": "Sep 2007 - Jun 2009",
+                        "description": "Working as flash developer in a couple of companies, delivering Adobe Flex and Flash websites fully coded in Action Script 3. At this time, working with RIA applications was amazing..."
                     }
                 ]
             },
@@ -87,6 +122,11 @@
         ]
     },
     "pt": {
+        "greetings": {
+            "title": "Eu sou Rafa Gomes, um dev.",
+            "subtitle": "Olá, muito prazer!",
+            "linkToResume": "Currículo"
+        },
         "menuLinks": [
             { "name": "Início", "link": "/" },
             { "name": "Currículo", "link": "/resume" },
