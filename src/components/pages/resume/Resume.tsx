@@ -1,5 +1,24 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, Fragment, useContext } from "react";
 import styled from "@emotion/styled";
+import resumeContent from "../../../resume-content/resume.json";
+import { LanguageContext } from "../../../contexts/LanguageContext";
+
+interface TypeSidebar {
+    title: string;
+    content: {} | [];
+}
+
+interface MainContent {
+    title: string;
+    subtitle: string;
+    date: string;
+    description?: string;
+}
+
+interface Main {
+    title: string;
+    content: Array<MainContent>;
+}
 
 const BlackSquare = styled.div`
     margin-right: 150px;
@@ -10,25 +29,46 @@ const BlackSquare = styled.div`
 `;
 
 function Resume(): ReactElement {
-    const hardSkills = [
-        "Javascript, Typescript",
-        "CSS, Sass, Stylus, Emotion, Styled components",
-        "Html, Pug, Semantic",
-        "Angular, React, Vue",
-        "Ionic, React Native",
-        "Jasmine, Jest",
-        "Node.js, Express",
-        "MongoDB, MySQL",
-        "Python, Flask, Django",
-        "Docker, vagrant",
-        "Linux Administration",
-        "AWS EC2 management",
-        "Agile, Kanban, Scrum",
-        "Ethical hacking principles",
-    ];
+    // const { en, pt } = resumeContent;
+    const { language } = useContext(LanguageContext);
 
-    const renderHardSkills = () => {
-        return hardSkills.map(hardSkill => <li>{hardSkill}</li>);
+    const renderList = (list: []) => (
+        <ul>
+            {list.map((item, index) => (
+                <li key={index}>{item}</li>
+            ))}
+        </ul>
+    );
+
+    const renderText = (item: any) => <p>{item.text}</p>;
+
+    const renderSidebar = () => {
+        return resumeContent[language].sidebar.map((item: TypeSidebar, index: number) => (
+            <Fragment key={index}>
+                <h2>{item.title}</h2>
+                {Array.isArray(item.content) ? renderList(item.content) : renderText(item.content)}
+            </Fragment>
+        ));
+    };
+
+    const renderMainContent = (mainContent: Array<MainContent>) => {
+        return mainContent.map((item: MainContent, index: number) => (
+            <div key={index}>
+                <h3>{item.title}</h3>
+                <h4>{item.subtitle}</h4>
+                <p>{item.date}</p>
+                {item.description ? <p>{item.description}</p> : ""}
+            </div>
+        ));
+    };
+
+    const renderMain = () => {
+        return resumeContent[language].main.map((item: Main, index: number) => (
+            <Fragment key={index}>
+                <h2>{item.title}</h2>
+                {renderMainContent(item.content)}
+            </Fragment>
+        ));
     };
 
     return (
@@ -38,51 +78,9 @@ function Resume(): ReactElement {
                     <h1>Rafa Gomes</h1>
                     <h2>web developer</h2>
                 </div>
-                <h2>Profile</h2>
-                <p>
-                    I've developed my entire life | and I'm searching for a remote | position in the field of Front- |
-                    end or Full Stack to apply my | skills and continue my growth | as a professional and | human being.
-                </p>
-
-                <h2>Hard Skills</h2>
-                <ul>{renderHardSkills()}</ul>
+                {renderSidebar()}
             </aside>
-            <main className="main">
-                <h2>Experience</h2>
-                <h3>Technology Manager</h3>
-                <h4>Accenture Interactive | Jan 2018 - present</h4>
-                <p>Lorem ipsum</p>
-
-                <h3>Technology Manager</h3>
-                <h4>Accenture Interactive | Jan 2018 - present</h4>
-                <p>Lorem ipsum</p>
-
-                <h3>Technology Manager</h3>
-                <h4>Accenture Interactive | Jan 2018 - present</h4>
-                <p>Lorem ipsum</p>
-
-                <h3>Technology Manager</h3>
-                <h4>Accenture Interactive | Jan 2018 - present</h4>
-                <p>Lorem ipsum</p>
-
-                <h3>Technology Manager</h3>
-                <h4>Accenture Interactive | Jan 2018 - present</h4>
-                <p>Lorem ipsum</p>
-
-                <h3>Technology Manager</h3>
-                <h4>Accenture Interactive | Jan 2018 - present</h4>
-                <p>Lorem ipsum</p>
-
-                <h2>Education</h2>
-                <h3>Technology Manager</h3>
-                <h4>Accenture Interactive | Jan 2018 - present</h4>
-                <p>Lorem ipsum</p>
-
-                <h2>Awards</h2>
-                <h3>Technology Manager</h3>
-                <h4>Accenture Interactive | Jan 2018 - present</h4>
-                <p>Lorem ipsum</p>
-            </main>
+            <main className="main">{renderMain()}</main>
         </BlackSquare>
     );
 }

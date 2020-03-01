@@ -1,0 +1,176 @@
+{
+    "en": {
+        "menuLinks": [
+            { "name": "Home", "link": "/" },
+            { "name": "Resume", "link": "/resume" },
+            {
+                "name": "Linkedin",
+                "link": "https://www.linkedin.com/in/rafagomesdev/",
+                "external": true
+            },
+            {
+                "name": "Twitter",
+                "link": "https://twitter.com/rafagomes_dev",
+                "external": true
+            }
+        ],
+        "sidebar": [
+            {
+                "title": "Contact",
+                "content": ["+55 ( 21) 9 7521-6516", "rafaelgomes.web@gmail.com", "linkedin.com/in/rafagomesdev"]
+            },
+            {
+                "title": "Profile",
+                "content": {
+                    "text": "I've developed my entire life and I'm searching for a remote position in the field of Front-end or Full Stack to apply my skills and continue my growth as a professional and human being."
+                }
+            },
+            {
+                "title": "Hard Skills",
+                "content": [
+                    "Javascript, Typescript",
+                    "CSS, Sass, Stylus, Less",
+                    "Html, Pug",
+                    "Angular, React, Vue",
+                    "Ionic, React Native",
+                    "TDD, Jasmine, Jest",
+                    "Node.js, Express",
+                    "MongoDB, MySQL",
+                    "Python, Flask, Django",
+                    "Linux Administration",
+                    "AWS EC2 management",
+                    "Agile, Kanban, Scrum",
+                    "Management, Leadership"
+                ]
+            }
+        ],
+        "main": [
+            {
+                "title": "Experience",
+                "content": [
+                    {
+                        "title": "Technology Manager",
+                        "subtitle": "Accenture",
+                        "date": "Jan 18 - present",
+                        "description": "Team management and leadership"
+                    },
+                    {
+                        "title": "Technology Manager",
+                        "subtitle": "Accenture",
+                        "date": "Jan 18 - present",
+                        "description": "Team management and leadership"
+                    },
+                    {
+                        "title": "Technology Manager",
+                        "subtitle": "Accenture",
+                        "date": "Jan 18 - present",
+                        "description": "Team management and leadership"
+                    }
+                ]
+            },
+            {
+                "title": "Education",
+                "content": [
+                    {
+                        "title": "INCOMPLETE BACHELOR IN ANALYSIS AND DEVELOPMENT",
+                        "subtitle": "ESTACIO UNIVERSITY",
+                        "date": "2000 - 2003"
+                    }
+                ]
+            },
+            {
+                "title": "Awards",
+                "content": [
+                    { "title": "INTRANET DESIGN ANNUAL AWARD", "subtitle": "NIELSEN NORMAN GROUP", "date": "JAN 2013" }
+                ]
+            }
+        ]
+    },
+    "pt": {
+        "menuLinks": [
+            { "name": "Início", "link": "/" },
+            { "name": "Currículo", "link": "/resume" },
+            {
+                "name": "Linkedin",
+                "link": "https://www.linkedin.com/in/rafagomesdev/",
+                "external": true
+            },
+            {
+                "name": "Twitter",
+                "link": "https://twitter.com/rafagomes_dev",
+                "external": true
+            }
+        ],
+        "sidebar": [
+            {
+                "title": "Contato",
+                "content": ["+55 ( 21) 9 7521-6516", "rafaelgomes.web@gmail.com", "linkedin.com/in/rafagomesdev"]
+            },
+            {
+                "title": "Bio",
+                "content": {
+                    "text": "I've developed my entire life and I'm searching for a remote position in the field of Front-end or Full Stack to apply my skills and continue my growth as a professional and human being."
+                }
+            },
+            {
+                "title": "Conhecimentos",
+                "content": [
+                    "Javascript, Typescript",
+                    "CSS, Sass, Stylus, Less",
+                    "Html, Pug",
+                    "Angular, React, Vue",
+                    "Ionic, React Native",
+                    "TDD, Jasmine, Jest",
+                    "Node.js, Express",
+                    "MongoDB, MySQL",
+                    "Python, Flask, Django",
+                    "Linux Administration",
+                    "AWS EC2 management",
+                    "Agile, Kanban, Scrum",
+                    "Management, Leadership"
+                ]
+            }
+        ],
+        "main": [
+            {
+                "title": "Experiência",
+                "content": [
+                    {
+                        "title": "Technology Manager",
+                        "subtitle": "Accenture",
+                        "date": "Jan 18 - present",
+                        "description": "Team management and leadership"
+                    },
+                    {
+                        "title": "Technology Manager",
+                        "subtitle": "Accenture",
+                        "date": "Jan 18 - present",
+                        "description": "Team management and leadership"
+                    },
+                    {
+                        "title": "Technology Manager",
+                        "subtitle": "Accenture",
+                        "date": "Jan 18 - present",
+                        "description": "Team management and leadership"
+                    }
+                ]
+            },
+            {
+                "title": "Educação",
+                "content": [
+                    {
+                        "title": "INCOMPLETE BACHELOR IN ANALYSIS AND DEVELOPMENT",
+                        "subtitle": "ESTACIO UNIVERSITY",
+                        "date": "2000 - 2003"
+                    }
+                ]
+            },
+            {
+                "title": "Prêmios",
+                "content": [
+                    { "title": "INTRANET DESIGN ANNUAL AWARD", "subtitle": "NIELSEN NORMAN GROUP", "date": "JAN 2013" }
+                ]
+            }
+        ]
+    }
+}

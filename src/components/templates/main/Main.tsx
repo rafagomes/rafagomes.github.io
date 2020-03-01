@@ -1,8 +1,10 @@
-import React, { Fragment, ReactElement } from "react";
+import React, { Fragment, ReactElement, useState } from "react";
 import { Route, RouteProps } from "react-router-dom";
 import styled from "@emotion/styled";
 import Header from "../../organisms/header";
+import { LanguageContext } from "../../../contexts/LanguageContext";
 import LanguageSelector from "../../organisms/language-selector";
+import resumeContent from "../../../resume-content/resume.json";
 
 const Footer = styled.footer`
     position: fixed;
@@ -12,28 +14,19 @@ const Footer = styled.footer`
 `;
 
 function MainTemplate(props: RouteProps): ReactElement {
-    let menuLinks = [
-        { name: "Home", link: "/" },
-        { name: "Resume", link: "/resume" },
-        {
-            name: "Linkedin",
-            link: "https://www.linkedin.com/in/rafagomesdev/",
-            external: true,
-        },
-        {
-            name: "Twitter",
-            link: "https://twitter.com/rafagomes_dev",
-            external: true,
-        },
-    ];
+    const [language, setLanguage] = useState("en");
+    const value = { language, setLanguage };
+    const { menuLinks } = resumeContent[language];
 
     return (
         <Fragment>
-            <Header menuLinks={menuLinks} />
-            <Route {...props} />
-            <Footer>
-                <LanguageSelector />
-            </Footer>
+            <LanguageContext.Provider value={value}>
+                <Header menuLinks={menuLinks} />
+                <Route {...props} />
+                <Footer>
+                    <LanguageSelector />
+                </Footer>
+            </LanguageContext.Provider>
         </Fragment>
     );
 }

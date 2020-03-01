@@ -1,6 +1,7 @@
 const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+//const json = require("./src/resume-content/resume.json");
 
 module.exports = {
     // webpack will take the files from ./src/index
