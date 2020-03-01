@@ -32,6 +32,13 @@ export default css`
         font-weight: 100;
     }
 
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-transform: uppercase;
+    }
+
     .resume {
         display: flex;
     }
@@ -61,13 +68,21 @@ export default css`
         font-weight: 300;
         line-height: 1.4;
     }
+    .resume p {
+        margin: 0 0 10px;
+    }
+
+    .resume div {
+        margin-bottom: 50px;
+    }
+
     .resume h3 {
-        font-size: 36px;
-        margin: 0 0 20px 0;
+        font-size: 24px;
+        margin: 0 0 5px 0;
     }
     .resume h4 {
-        font-size: 26px;
-        margin: 0 0 15px 0;
+        font-size: 24px;
+        margin: 0 0 5px 0;
     }
     .sidebar {
         width: 350px;
@@ -75,8 +90,5 @@ export default css`
     }
     .main {
         width: 50%;
-    }
-    .resume p {
-        margin-bottom: 50px;
     }
 `;
