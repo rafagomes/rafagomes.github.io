@@ -2,11 +2,11 @@ import React from "react";
 
 type ListType = "ul" | "ol";
 
-function List({ ListType = "ul", items }: { ListType?: ListType; items: [] }) {
+function List({ ListType = "ul", items, ...otherProps }: { ListType?: ListType; items: [] }) {
     const renderList = () => {
         return items.map((item, index) => <li key={index}>{item}</li>);
     };
-    return <ListType>{renderList()}</ListType>;
+    return <ListType {...otherProps}>{renderList()}</ListType>;
 }
 
 export default List;

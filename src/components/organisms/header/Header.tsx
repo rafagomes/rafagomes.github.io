@@ -10,7 +10,6 @@ const Li = styled.li`
 const Ul = styled.ul`
     display: flex;
     max-width: 650px;
-
     padding-left: 0;
     flex-direction: row;
     justify-content: space-between;

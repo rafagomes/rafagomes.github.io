@@ -23,6 +23,10 @@ export default css`
         font-family: "Roboto";
     }
 
+    a:hover {
+        opacity: 0.7;
+    }
+
     h1,
     h2,
     h3,

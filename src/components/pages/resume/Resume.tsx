@@ -39,10 +39,10 @@ function Resume(): ReactElement {
 
     const renderSidebar = () => {
         return resumeContent[language].sidebar.map((item: TypeSidebar, index: number) => (
-            <Fragment key={index}>
+            <div key={index}>
                 <Heading rank="2">{item.title}</Heading>
                 {Array.isArray(item.content) ? renderList(item.content) : renderText(item.content)}
-            </Fragment>
+            </div>
         ));
     };
 
