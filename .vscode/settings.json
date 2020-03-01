@@ -4,6 +4,7 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+    "vscode-coverage-highlighter.defaultState": "enable",
     "eslint.validate": [
         "javascript",
         "javascriptreact",
