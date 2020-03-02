@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Arrow component Arrow component renders as expected 1`] = `
-<span
-  className="css-x8d90d-ArrowDown ektqt6m0"
-/>
-`;

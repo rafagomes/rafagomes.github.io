@@ -7,7 +7,7 @@ import List from "../../molecules/list";
 
 interface TypeSidebar {
     title: string;
-    content: {} | [];
+    content: {} | string[];
 }
 
 interface MainContent {

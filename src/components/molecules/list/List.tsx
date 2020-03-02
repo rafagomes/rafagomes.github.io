@@ -2,7 +2,7 @@ import React from "react";
 
 type ListType = "ul" | "ol";
 
-function List({ ListType = "ul", items, ...otherProps }: { ListType?: ListType; items: [] }) {
+function List({ ListType = "ul", items, ...otherProps }: { ListType?: ListType; items: string[] }) {
     const renderList = () => {
         return items.map((item, index) => <li key={index}>{item}</li>);
     };

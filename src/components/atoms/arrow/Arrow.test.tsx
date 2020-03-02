@@ -1,10 +1,10 @@
 import React from "react";
-import { create } from "react-test-renderer";
+import { render } from "enzyme";
 import Arrow from "./Arrow";
 
 describe("Arrow component", () => {
     it("Arrow component renders as expected", () => {
-        const arrow = create(<Arrow />);
-        expect(arrow.toJSON()).toMatchSnapshot();
+        const arrow = render(<Arrow />);
+        expect(arrow[0].name).toEqual("span");
     });
 });

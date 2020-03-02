@@ -1,18 +1,20 @@
 import React from "react";
-import "../../../setupTests";
-import { mount } from "enzyme";
+import { render, mount } from "enzyme";
 import Heading from "./Heading";
 
 describe("Heading", () => {
-    const headingProps = { rank: "1", title: "Title" };
-
-    it("Heading component renders text inside it", () => {
-        const heading = mount(<Heading rank={headingProps.rank}>{headingProps.title}</Heading>);
-        expect(heading.text()).toBe("Title");
+    it("renders text inside it", () => {
+        const wrapper = render(<Heading rank="1">title</Heading>);
+        expect(wrapper.text()).toContain("title");
     });
 
-    it("Heading component render with rank correctly", () => {
-        const heading = mount(<Heading rank={headingProps.rank}>{headingProps.title}</Heading>);
-        expect(heading).toBe(<h1>Title</h1>);
+    it("renders rank prop", () => {
+        const wrapper = mount(<Heading rank="1">title</Heading>);
+        expect(wrapper.props().rank).toBe("1");
+    });
+
+    it("renders h1 as expected", () => {
+        const wrapper = render(<Heading rank="1">title</Heading>);
+        expect(wrapper[0].name).toEqual("h1");
     });
 });
