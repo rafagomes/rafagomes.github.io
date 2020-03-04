@@ -5,6 +5,6 @@ import Resume from "./Resume";
 describe("Resume", () => {
     it("should mount without crash", () => {
         const wrapper = mount(<Resume />);
-        expect(wrapper.find("h1").text()).toBe("Rafa Gomes");
+        expect(wrapper.children().length).toBeGreaterThan(0);
     });
 });

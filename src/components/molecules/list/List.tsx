@@ -1,12 +1,32 @@
-import React from "react";
+import React, { ReactElement, ReactNode } from "react";
+import { LinkProps } from "../../atoms/navlink/NavLink";
 
 type ListType = "ul" | "ol";
 
-function List({ ListType = "ul", items, ...otherProps }: { ListType?: ListType; items: string[] }) {
-    const renderList = () => {
+interface Props {
+    ListType?: ListType;
+    items: string[] | LinkProps[];
+    isNav?: boolean;
+}
+
+function List({ ListType = "ul", isNav = false, items, ...otherProps }: Props): ReactElement {
+    const renderListItems = (): ReactNode => {
+        console.log(typeof items);
         return items.map((item, index) => <li key={index}>{item}</li>);
     };
-    return <ListType {...otherProps}>{renderList()}</ListType>;
+
+    const renderList = (): ReactElement => {
+        if (isNav) {
+            return (
+                <nav>
+                    <ListType {...otherProps}>{renderListItems()}</ListType>
+                </nav>
+            );
+        }
+        return <ListType {...otherProps}>{renderListItems()}</ListType>;
+    };
+
+    return renderList();
 }
 
 export default List;

@@ -26,7 +26,7 @@ const activeLanguage = css`
 function LanguageSelector(): ReactElement {
     const { language, setLanguage } = useContext(LanguageContext);
 
-    const updateLanguage = (event: React.MouseEvent, _language: string) => {
+    const updateLanguage = (event: React.MouseEvent, _language: string): void => {
         event.preventDefault();
         setLanguage(_language);
     };
@@ -37,7 +37,7 @@ function LanguageSelector(): ReactElement {
                 <li css={listStyle}>
                     <a
                         href="#"
-                        onClick={(event: React.MouseEvent) => updateLanguage(event, "en")}
+                        onClick={(event: React.MouseEvent): void => updateLanguage(event, "en")}
                         css={language === "en" ? activeLanguage : linkStyle}
                     >
                         EN
@@ -46,7 +46,7 @@ function LanguageSelector(): ReactElement {
                 <li css={listStyle}>
                     <a
                         href="#"
-                        onClick={(event: React.MouseEvent) => updateLanguage(event, "pt")}
+                        onClick={(event: React.MouseEvent): void => updateLanguage(event, "pt")}
                         css={language === "pt" ? activeLanguage : linkStyle}
                     >
                         PT

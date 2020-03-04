@@ -6,8 +6,8 @@
             "linkToResume": "Resume"
         },
         "menuLinks": [
-            { "name": "Home", "link": "/" },
-            { "name": "Resume", "link": "/resume" },
+            { "name": "Home", "to": "/" },
+            { "name": "Resume", "to": "/resume" },
             {
                 "name": "Linkedin",
                 "link": "https://www.linkedin.com/in/rafagomesdev/",

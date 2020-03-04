@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, ReactElement } from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
@@ -31,7 +31,7 @@ const BlackSquare = styled.div`
     width: 100%;
 `;
 
-function Home() {
+function Home(): ReactElement {
     const { language } = useContext(LanguageContext);
     const { title, subtitle, linkToResume } = resumeContent[language].greetings;
 

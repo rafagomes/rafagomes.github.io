@@ -11,19 +11,33 @@ const linkStyle = css({
     fontsize: "24px",
 });
 
+export interface LinkProps {
+    to: string;
+    external?: boolean;
+    onClick?: () => void;
+    active?: boolean;
+}
+
 interface Props {
     children: string;
-    to: string;
-    external?: Boolean;
+    linkProps: LinkProps;
 }
 
 function NavLink(props: Props): ReactElement {
-    const { children, to, external, ...otherProps } = props;
+    const { children, ...otherProps } = props;
+    const { to, external, onClick } = props.linkProps;
 
-    const renderLink = () => {
+    const renderLink = (): ReactElement => {
         if (external) {
             return (
-                <a css={linkStyle} href={to} {...otherProps} target="_blank">
+                <a
+                    css={linkStyle}
+                    href={to}
+                    onClick={onClick}
+                    {...otherProps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {children}
                 </a>
             );

@@ -1,5 +1,6 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, ReactNode } from "react";
 import NavLink from "../../atoms/navlink";
+import List from "../../molecules/list";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 
@@ -24,28 +25,26 @@ const headerStyle = css`
 `;
 
 interface Linkprops {
-    link: string;
+    to: string;
     name: string;
-    external?: Boolean;
+    external?: boolean;
 }
 
 interface Props {
-    menuLinks: Array<Linkprops>;
+    menuLinks: Linkprops[];
 }
 
 function Header({ menuLinks }: Props): ReactElement {
-    const renderMenu = () => {
-        return menuLinks.map((linkProps: Linkprops) => {
-            const { link, name, ...otherProps } = linkProps;
+    const renderMenu = (): ReactNode => {
+        return <List items={menuLinks} />;
+        // return menuLinks.map((linkProps: Linkprops, index: number) => {
+        //     return (
 
-            return (
-                <Li key={link}>
-                    <NavLink to={link} {...otherProps}>
-                        {name}
-                    </NavLink>
-                </Li>
-            );
-        });
+        //         <Li key={index}>
+        //             <NavLink linkProps={linkProps}>{linkProps.name}</NavLink>
+        //         </Li>
+        //     );
+        // });
     };
 
     return (
