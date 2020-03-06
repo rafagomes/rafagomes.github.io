@@ -1,12 +1,12 @@
 import React from "react";
 import List from "./List";
-import { render } from "enzyme";
+import { render, mount } from "enzyme";
 
 describe("List", () => {
-    const items = ["item one", "item two"];
+    const items = [{ text: "item one" }, { text: "item two" }];
 
     it("renders the correct number of items", () => {
-        const wrapper = render(<List items={items} />);
+        const wrapper = mount(<List items={items} />);
         expect(wrapper.find("li").length).toEqual(2);
     });
 

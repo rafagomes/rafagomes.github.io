@@ -6,17 +6,31 @@
             "linkToResume": "Resume"
         },
         "menuLinks": [
-            { "text": "Home", "to": "/" },
-            { "text": "Resume", "to": "/resume" },
+            {
+                "text": "Home",
+                "link": {
+                    "to": "/"
+                }
+            },
+            {
+                "text": "Resume",
+                "link": {
+                    "to": "/resume"
+                }
+            },
             {
                 "text": "Linkedin",
-                "to": "https://www.linkedin.com/in/rafagomesdev/",
-                "external": true
+                "link": {
+                    "to": "https://www.linkedin.com/in/rafagomesdev/",
+                    "external": true
+                }
             },
             {
                 "text": "Twitter",
-                "to": "https://twitter.com/rafagomes_dev",
-                "external": true
+                "link": {
+                    "to": "https://twitter.com/rafagomes_dev",
+                    "external": true
+                }
             }
         ],
         "sidebar": [
@@ -128,17 +142,31 @@
             "linkToResume": "Currículo"
         },
         "menuLinks": [
-            { "name": "Início", "link": "/" },
-            { "name": "Currículo", "link": "/resume" },
             {
-                "name": "Linkedin",
-                "link": "https://www.linkedin.com/in/rafagomesdev/",
-                "external": true
+                "text": "Início",
+                "link": {
+                    "to": "/"
+                }
             },
             {
-                "name": "Twitter",
-                "link": "https://twitter.com/rafagomes_dev",
-                "external": true
+                "text": "Currículo",
+                "link": {
+                    "to": "/resume"
+                }
+            },
+            {
+                "text": "Linkedin",
+                "link": {
+                    "to": "https://www.linkedin.com/in/rafagomesdev/",
+                    "external": true
+                }
+            },
+            {
+                "text": "Twitter",
+                "link": {
+                    "to": "https://twitter.com/rafagomes_dev",
+                    "external": true
+                }
             }
         ],
         "sidebar": [

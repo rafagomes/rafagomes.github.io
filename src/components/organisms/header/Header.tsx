@@ -1,20 +1,8 @@
 import React, { ReactElement, ReactNode } from "react";
-import NavLink from "../../atoms/navlink";
 import List from "../../molecules/list";
-import styled from "@emotion/styled";
+
 import { css } from "@emotion/core";
-
-const Li = styled.li`
-    list-style: none;
-`;
-
-const Ul = styled.ul`
-    display: flex;
-    max-width: 650px;
-    padding-left: 0;
-    flex-direction: row;
-    justify-content: space-between;
-`;
+import { LinkProps } from "../../atoms/navlink/NavLink";
 
 const headerStyle = css`
     position: relative;
@@ -24,28 +12,25 @@ const headerStyle = css`
     height: 80px;
 `;
 
-interface Linkprops {
-    to: string;
+interface List {
     text: string;
-    external?: boolean;
+    menuLinks: LinkProps[];
 }
 
-interface Props {
-    menuLinks: Linkprops[];
-}
+const rowList = css`
+    display: flex;
+    max-width: 650px;
+    padding-left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+`;
 
-function Header({ menuLinks }: Props): ReactElement {
+function Header({ menuLinks }: List): ReactElement {
     const renderMenu = (): ReactNode => {
-        return <List items={menuLinks} />;
+        return <List css={rowList} isNav={true} items={menuLinks} />;
     };
 
-    return (
-        <header css={headerStyle}>
-            <nav>
-                <Ul>{renderMenu()}</Ul>
-            </nav>
-        </header>
-    );
+    return <header css={headerStyle}>{renderMenu()}</header>;
 }
 
 export default Header;

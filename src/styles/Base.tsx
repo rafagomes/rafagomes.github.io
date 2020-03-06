@@ -43,6 +43,10 @@ export default css`
         text-transform: uppercase;
     }
 
+    header li {
+        list-style: none;
+    }
+
     .resume {
         display: flex;
     }

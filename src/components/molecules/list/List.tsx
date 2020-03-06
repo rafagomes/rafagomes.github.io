@@ -1,39 +1,33 @@
 import React, { ReactElement, ReactNode } from "react";
-import NavLink from "../../atoms/navlink/NavLink";
+import NavLink, { LinkProps } from "../../atoms/navlink/NavLink";
 
 type ListType = "ul" | "ol";
 
 interface Props {
     ListType?: ListType;
-    items: string[] | LinkProps[];
+    items: any;
     isNav?: boolean;
 }
 
 interface ListItem {
     text: string;
-    linkProps: LinkProps;
+    css?: CSS;
+    link?: LinkProps;
 }
 
 function List({ ListType = "ul", isNav = false, items, ...otherProps }: Props): ReactElement {
-    const renderListItems = (): ReactNode => (
-        items.map((item: ListItem, index: number) => {
+    const renderListItems = (): ReactNode => {
+        return items.map((item: ListItem, index: number) => {
             const { text, ...itemProps } = item;
-            const linkProps = itemProps;
-
-            if (item.to) {
+            if (itemProps.link) {
                 return (
                     <li key={index}>
-                        <NavLink linkProps={linkProps}>{text}</NavLink>
-                    </li>
-                );
-            } else {
-                return (
-                    <li key={index}>
-                        <li key={index}>{text}</li>
+                        <NavLink linkProps={itemProps.link}>{text}</NavLink>
                     </li>
                 );
             }
-        ));
+            return <li key={index}>{text}</li>;
+        });
     };
 
     const renderList = (): ReactElement => {
