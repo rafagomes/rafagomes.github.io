@@ -26,7 +26,7 @@ function List({ ListType = "ul", isNav = false, items, ...otherProps }: Props): 
                     </li>
                 );
             }
-            return <li key={index}>{text}</li>;
+            return <li key={index}>{item}</li>;
         });
     };
 
