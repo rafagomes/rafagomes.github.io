@@ -6,16 +6,16 @@
             "linkToResume": "Resume"
         },
         "menuLinks": [
-            { "name": "Home", "to": "/" },
-            { "name": "Resume", "to": "/resume" },
+            { "text": "Home", "to": "/" },
+            { "text": "Resume", "to": "/resume" },
             {
-                "name": "Linkedin",
-                "link": "https://www.linkedin.com/in/rafagomesdev/",
+                "text": "Linkedin",
+                "to": "https://www.linkedin.com/in/rafagomesdev/",
                 "external": true
             },
             {
-                "name": "Twitter",
-                "link": "https://twitter.com/rafagomes_dev",
+                "text": "Twitter",
+                "to": "https://twitter.com/rafagomes_dev",
                 "external": true
             }
         ],

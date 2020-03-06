@@ -26,7 +26,7 @@ const headerStyle = css`
 
 interface Linkprops {
     to: string;
-    name: string;
+    text: string;
     external?: boolean;
 }
 
@@ -37,14 +37,6 @@ interface Props {
 function Header({ menuLinks }: Props): ReactElement {
     const renderMenu = (): ReactNode => {
         return <List items={menuLinks} />;
-        // return menuLinks.map((linkProps: Linkprops, index: number) => {
-        //     return (
-
-        //         <Li key={index}>
-        //             <NavLink linkProps={linkProps}>{linkProps.name}</NavLink>
-        //         </Li>
-        //     );
-        // });
     };
 
     return (

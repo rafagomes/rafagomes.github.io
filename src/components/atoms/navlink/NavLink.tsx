@@ -18,14 +18,14 @@ export interface LinkProps {
     active?: boolean;
 }
 
-interface Props {
+interface NavLinkProps {
     children: string;
     linkProps: LinkProps;
 }
 
-function NavLink(props: Props): ReactElement {
-    const { children, ...otherProps } = props;
-    const { to, external, onClick } = props.linkProps;
+function NavLink(props: NavLinkProps): ReactElement {
+    const { children } = props;
+    const { to, external, onClick, ...otherLinkProps } = props.linkProps;
 
     const renderLink = (): ReactElement => {
         if (external) {
@@ -34,7 +34,7 @@ function NavLink(props: Props): ReactElement {
                     css={linkStyle}
                     href={to}
                     onClick={onClick}
-                    {...otherProps}
+                    {...otherLinkProps}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -44,7 +44,7 @@ function NavLink(props: Props): ReactElement {
         }
 
         return (
-            <Link css={linkStyle} {...props}>
+            <Link to={to} css={linkStyle} {...otherLinkProps}>
                 {children}
             </Link>
         );

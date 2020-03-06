@@ -1,5 +1,5 @@
 import React, { ReactElement, ReactNode } from "react";
-import { LinkProps } from "../../atoms/navlink/NavLink";
+import NavLink from "../../atoms/navlink/NavLink";
 
 type ListType = "ul" | "ol";
 
@@ -9,10 +9,31 @@ interface Props {
     isNav?: boolean;
 }
 
+interface ListItem {
+    text: string;
+    linkProps: LinkProps;
+}
+
 function List({ ListType = "ul", isNav = false, items, ...otherProps }: Props): ReactElement {
-    const renderListItems = (): ReactNode => {
-        console.log(typeof items);
-        return items.map((item, index) => <li key={index}>{item}</li>);
+    const renderListItems = (): ReactNode => (
+        items.map((item: ListItem, index: number) => {
+            const { text, ...itemProps } = item;
+            const linkProps = itemProps;
+
+            if (item.to) {
+                return (
+                    <li key={index}>
+                        <NavLink linkProps={linkProps}>{text}</NavLink>
+                    </li>
+                );
+            } else {
+                return (
+                    <li key={index}>
+                        <li key={index}>{text}</li>
+                    </li>
+                );
+            }
+        ));
     };
 
     const renderList = (): ReactElement => {
