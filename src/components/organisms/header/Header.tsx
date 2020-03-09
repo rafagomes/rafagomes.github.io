@@ -25,8 +25,8 @@ const rowList = css`
     justify-content: space-between;
 `;
 
-function Header({ menuLinks }: List): ReactElement {
-    const renderMenu = (): ReactNode => {
+function Header({ menuLinks }: List) {
+    const renderMenu = () => {
         return <List css={rowList} isNav={true} items={menuLinks} />;
     };
 
