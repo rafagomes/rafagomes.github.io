@@ -28,6 +28,17 @@ const BlackSquare = styled.div`
     color: white;
     padding: 50px;
     font-size: 24px;
+
+    @media (max-width: 420px) {
+        margin-right: 0;
+        padding: 20px;
+        font-size: 16px;
+        flex-wrap: wrap;
+
+        .main {
+            width: 100%;
+        }
+    }
 `;
 
 function Resume(): ReactElement {

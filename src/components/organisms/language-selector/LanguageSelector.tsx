@@ -16,6 +16,9 @@ const linkStyle = css`
     font-size: 24px;
     text-decoration: none;
     color: grey;
+    @media (max-width: 420px) {
+        font-size: 18px;
+    }
 `;
 
 const activeLanguage = css`

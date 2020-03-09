@@ -1,4 +1,3 @@
-import React, { ReactElement, ReactNode } from "react";
 import List from "../../molecules/list";
 
 import { css } from "@emotion/core";
@@ -10,6 +9,9 @@ const headerStyle = css`
     margin-top: 0;
     background: white;
     height: 80px;
+    @media (max-width: 420px) {
+        padding: 20px 20px 0 20px;
+    }
 `;
 
 interface List {
@@ -23,6 +25,11 @@ const rowList = css`
     padding-left: 0;
     flex-direction: row;
     justify-content: space-between;
+    @media (max-width: 420px) {
+        a {
+            font-size: 16px;
+        }
+    }
 `;
 
 function Header({ menuLinks }: List) {

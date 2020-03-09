@@ -17,18 +17,22 @@ const LinkStyle = css`
     text-decoration: none;
     font-weight: 300;
     font-size: 24px;
+    @media (max-width: 420px) {
+        font-size: 18px;
+        margin-left: 40%;
+    }
 `;
 
 const BlackSquare = styled.div`
     display: flex;
     position: absolute;
+    height: 50vh;
+    width: 100%;
     bottom: 0;
     justify-content: center;
     align-items: flex-end;
     right: 150px;
     background-color: black;
-    height: 50vh;
-    width: 100%;
 `;
 
 function Home(): ReactElement {

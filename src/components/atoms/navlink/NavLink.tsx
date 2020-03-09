@@ -44,7 +44,7 @@ function NavLink(props: NavLinkProps): ReactElement {
         }
 
         return (
-            <Link to={to} css={linkStyle} {...otherLinkProps}>
+            <Link to={to} css={linkStyle} onClick={onClick} {...otherLinkProps}>
                 {children}
             </Link>
         );
