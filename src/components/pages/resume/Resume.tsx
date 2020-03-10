@@ -22,12 +22,55 @@ interface Main {
     content: Array<MainContent>;
 }
 
+const NameBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: black;
+    background: white;
+    margin-left: -50px;
+    padding: 40px 0 20px 50px;
+    margin-bottom: 55px;
+
+    & h1,
+    & h2 {
+        font-size: 48px;
+        font-weight: 300;
+        margin: 0 0 30px 0;
+    }
+
+    @media (max-width: 420px) {
+        padding: 20px;
+        margin-left: -20px;
+        margin-bottom: 0px;
+
+        & h1,
+        & h2 {
+            font-size: 30px;
+            margin: 0 0 5px 0;
+        }
+    }
+`;
+
 const BlackSquare = styled.div`
+    display: flex;
     margin-right: 150px;
     background: black;
     color: white;
     padding: 50px;
     font-size: 24px;
+
+    & h2 {
+        font-size: 36px;
+    }
+
+    & p,
+    & h3,
+    & h4,
+    & li {
+        font-weight: 300;
+        line-height: 1.4;
+    }
 
     @media (max-width: 420px) {
         margin-right: 0;
@@ -41,6 +84,46 @@ const BlackSquare = styled.div`
     }
 `;
 
+const Sidebar = styled.aside`
+    margin-bottom: 0;
+`;
+
+const Main = styled.main`
+    margin-top: -20px;
+`;
+
+const ContentWrapper = styled.div`
+    margin-bottom: 50px;
+
+    & p {
+        margin: 0 0 10px;
+    }
+
+    & h3,
+    & h4 {
+        font-size: 24px;
+        margin: 0 0 5px 0;
+    }
+
+    @media (max-width: 420px) {
+        margin-bottom: 30px;
+
+        & h2 {
+            font-size: 30px;
+        }
+
+        & p {
+            margin: 0;
+        }
+
+        & h3,
+        & h4 {
+            font-size: 18px;
+            margin: 0 0 5px 0;
+        }
+    }
+`;
+
 function Resume(): ReactElement {
     const { language } = useContext(LanguageContext);
 
@@ -50,43 +133,43 @@ function Resume(): ReactElement {
 
     const renderSidebar = () => {
         return resumeContent[language].sidebar.map((item: TypeSidebar, index: number) => (
-            <div key={index}>
+            <ContentWrapper key={index}>
                 <Heading rank="2">{item.title}</Heading>
                 {Array.isArray(item.content) ? renderList(item.content) : renderText(item.content)}
-            </div>
+            </ContentWrapper>
         ));
     };
 
     const renderMainContent = (mainContent: Array<MainContent>) => {
         return mainContent.map((item: MainContent, index: number) => (
-            <div key={index}>
+            <ContentWrapper key={index}>
                 <Heading rank="3">{item.title}</Heading>
                 <Heading rank="4">{item.subtitle}</Heading>
                 <p>{item.date}</p>
                 {item.description ? <p>{item.description}</p> : ""}
-            </div>
+            </ContentWrapper>
         ));
     };
 
     const renderMain = () => {
         return resumeContent[language].main.map((item: Main, index: number) => (
-            <Fragment key={index}>
+            <ContentWrapper key={index}>
                 <Heading rank="2">{item.title}</Heading>
                 {renderMainContent(item.content)}
-            </Fragment>
+            </ContentWrapper>
         ));
     };
 
     return (
         <BlackSquare className="resume">
-            <aside className="sidebar">
-                <div className="name-block">
+            <Sidebar className="sidebar">
+                <NameBlock>
                     <Heading rank="1">Rafa Gomes</Heading>
                     <Heading rank="2">web developer</Heading>
-                </div>
+                </NameBlock>
                 {renderSidebar()}
-            </aside>
-            <main className="main">{renderMain()}</main>
+            </Sidebar>
+            <Main className="main">{renderMain()}</Main>
         </BlackSquare>
     );
 }

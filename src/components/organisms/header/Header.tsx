@@ -9,8 +9,12 @@ const headerStyle = css`
     margin-top: 0;
     background: white;
     height: 80px;
+    li {
+        list-style: none;
+    }
     @media (max-width: 420px) {
-        padding: 20px 20px 0 20px;
+        padding: 5px 20px 0 20px;
+        height: 50px;
     }
 `;
 

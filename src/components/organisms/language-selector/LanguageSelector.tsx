@@ -6,6 +6,9 @@ const listContainer = css`
     display: flex;
     padding-left: 0;
     justify-content: space-between;
+    @media (max-width: 420px) {
+        padding: 0 10px;
+    }
 `;
 
 const listStyle = css`

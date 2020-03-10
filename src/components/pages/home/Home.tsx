@@ -17,9 +17,9 @@ const LinkStyle = css`
     text-decoration: none;
     font-weight: 300;
     font-size: 24px;
+
     @media (max-width: 420px) {
-        font-size: 18px;
-        margin-left: 40%;
+        display: none;
     }
 `;
 
@@ -30,9 +30,29 @@ const BlackSquare = styled.div`
     width: 100%;
     bottom: 0;
     justify-content: center;
-    align-items: flex-end;
     right: 150px;
     background-color: black;
+    align-items: flex-end;
+
+    @media (max-width: 420px) {
+        right: 0;
+        height: 70vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+`;
+
+const ContactMobile = styled.div`
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-left: 20px;
+    align-self: flex-start;
+    justify-self: flex-start;
+
+    @media (min-width: 421px) {
+        display: none;
+    }
 `;
 
 function Home(): ReactElement {
@@ -43,6 +63,11 @@ function Home(): ReactElement {
         <Fragment>
             <Greeting key="Greeting" presentation={title} greeting={subtitle} />
             <BlackSquare>
+                <ContactMobile>
+                    <h4>Email: hello@rafagomes.dev</h4>
+                    <h4>Location: Rio de Janeiro</h4>
+                    <h4>Age: 36</h4>
+                </ContactMobile>
                 <Link css={LinkStyle} to="/resume">
                     {linkToResume}
                     <ArrowLink />
