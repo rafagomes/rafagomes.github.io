@@ -22,6 +22,10 @@ const LinkStyle = css`
     @media (max-width: 420px) {
         display: none;
     }
+
+    @media (min-width: 2000px) {
+        font-size: 3.5rem;
+    }
 `;
 
 const BlackSquare = styled.div`
@@ -40,6 +44,11 @@ const BlackSquare = styled.div`
         height: 65vh;
         flex-direction: column;
         justify-content: flex-start;
+    }
+
+    @media (min-width: 2000px) {
+        right: 10%;
+        font-size: 2.3rem;
     }
 `;
 

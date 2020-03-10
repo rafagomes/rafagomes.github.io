@@ -9,8 +9,9 @@ interface Props {
 }
 
 const Wrapper = styled.div`
-    margin-left: 5%;
+    margin-left: 50px;
     margin-top: 5%;
+
     @media (max-width: 1000px) and (min-width: 700px) {
         margin-top: 10%;
     }
