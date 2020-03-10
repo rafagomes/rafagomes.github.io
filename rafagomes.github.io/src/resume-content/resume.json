@@ -175,13 +175,13 @@
                 "content": ["+55 ( 21) 9 7521-6516", "rafaelgomes.web@gmail.com", "linkedin.com/in/rafagomesdev"]
             },
             {
-                "title": "Bio",
+                "title": "Sobre",
                 "content": {
-                    "text": "I've developed my entire life and I'm searching for a remote position in the field of Front-end or Full Stack to apply my skills and continue my growth as a professional and human being."
+                    "text": "I've been working with software development my entire life. In the past 13 years I have worked with amazing teammates delivering complex projects for some huge clients like Verizon, Coca-cola, American Express and top 10 major companies in Brazil. Programming is my passion."
                 }
             },
             {
-                "title": "Conhecimentos",
+                "title": "Hard Skills",
                 "content": [
                     "Javascript, Typescript",
                     "CSS, Sass, Stylus, Less",
@@ -204,22 +204,52 @@
                 "title": "Experiência",
                 "content": [
                     {
-                        "title": "Technology Manager",
+                        "title": "Gerente de Tecnologia",
                         "subtitle": "Accenture",
-                        "date": "Jan 18 - present",
-                        "description": "Team management and leadership"
+                        "date": "Jan 2018 - atualmente",
+                        "description": "Meu papel na Accenture é uma combinação entre um líder técnico e um gestor, com o objetivo de direcionar o time para entregar excelentes podutos para nossos clientes."
                     },
                     {
-                        "title": "Technology Manager",
-                        "subtitle": "Accenture",
-                        "date": "Jan 18 - present",
-                        "description": "Team management and leadership"
+                        "title": "Diretor de tecnologia",
+                        "subtitle": "Tropikal",
+                        "date": "Jan 2018 - atualmente",
+                        "description": "Tropikal é parte da Accetnure aqui eu acabo ficando com as responsabilidades de um diretor de um grupo."
                     },
                     {
-                        "title": "Technology Manager",
-                        "subtitle": "Accenture",
-                        "date": "Jan 18 - present",
-                        "description": "Team management and leadership"
+                        "title": "Líder técnico",
+                        "subtitle": "Huge inc.",
+                        "date": "Jan 2017 - Dez 2017",
+                        "description": "Este foi um papel complexo, também uma combinação entre gestor e técnico. Algumas participações importantes foi o desenvolvimento de dois grandes projetos de bancos e sites para grandes marcas internacionais."
+                    },
+                    {
+                        "title": "Gestor de tecnologia e Sócio",
+                        "subtitle": "Parafernalia Interativa",
+                        "date": "Mar 2013 - Jul 2015",
+                        "description": "Liderando e desenvolvendo aplicações para nossos clientes. Fui responsável por vendas, desenvolvimento de novos negócios, gestor e líder técnico."
+                    },
+                    {
+                        "title": "Senior Front-end developer",
+                        "subtitle": "Huge inc.",
+                        "date": "Set 2011 - Mar 2013",
+                        "description": "Trabalhar na Huge sempre foi uma grande experiência, já que desenvolvemos grandes projetos, tanto nacionalmente como internacionalmente. Fui responsável por programar projetos com foco no usuário e grandes interações utilizando frameworks de ponta."
+                    },
+                    {
+                        "title": "Senior Web developer",
+                        "subtitle": "6d",
+                        "date": "Set 2010 - Set 2011",
+                        "description": "Um dos lugares que tenho muito carinho. Flash e Javascript para o desenvolvimento de projetos na área de moda, focado em design e estilo. Na 6d eu comecei a trabalhar mais sério com Backend utilizando Drupal como CMS, CodeIgnite e Wordpress."
+                    },
+                    {
+                        "title": "Web developer",
+                        "subtitle": "Kaus Midia",
+                        "date": "Jun 2009 - Set 2010",
+                        "description": "Desenvolvimento em ritmo rápido com entregas agressivas. Na Kaus nós desenvolvemos diversos processos de reaproveitiamento de códigos. Lá nós desenvolvíamos sites menores, mas em grande número. Dentre os maiores destaques ficam projetos como o Criança esperança e projetos de votação."
+                    },
+                    {
+                        "title": "Flash Developer",
+                        "subtitle": "Algumas empresas menores",
+                        "date": "Set 2007 - Jun 2009",
+                        "description": "Trabalhando como desenvolvedor Flash em algumas empresas. Tive a oportunidade de desenvolver com Adobe Flex e criar muitas experiências com ActionScript 3. Nessa época, RIA era o grande nome."
                     }
                 ]
             },
@@ -227,8 +257,8 @@
                 "title": "Educação",
                 "content": [
                     {
-                        "title": "INCOMPLETE BACHELOR IN ANALYSIS AND DEVELOPMENT",
-                        "subtitle": "ESTACIO UNIVERSITY",
+                        "title": "Análise e Desenvolvimento de sistemas",
+                        "subtitle": "Universidade Estácio",
                         "date": "2000 - 2003"
                     }
                 ]
