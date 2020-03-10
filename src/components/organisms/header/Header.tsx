@@ -9,12 +9,17 @@ const headerStyle = css`
     margin-top: 0;
     background: white;
     height: 80px;
+
     li {
         list-style: none;
     }
+
     @media (max-width: 420px) {
-        padding: 5px 20px 0 20px;
+        padding: 5px 20px 0 5%;
         height: 50px;
+    }
+    @media (min-width: 2000px) {
+        height: 130px;
     }
 `;
 
@@ -32,6 +37,13 @@ const rowList = css`
     @media (max-width: 420px) {
         a {
             font-size: 16px;
+        }
+    }
+
+    @media (min-width: 2000px) {
+        max-width: 45%;
+        a {
+            font-size: 4rem;
         }
     }
 `;

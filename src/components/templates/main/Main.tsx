@@ -11,11 +11,16 @@ const Footer = styled.footer`
     right: 30px;
     bottom: 30px;
     width: 90px;
+
     @media (max-width: 420px) {
         right: 0;
         bottom: 10px;
         width: 70px;
         background: white;
+    }
+
+    @media (min-width: 2000px) {
+        width: 7%;
     }
 `;
 

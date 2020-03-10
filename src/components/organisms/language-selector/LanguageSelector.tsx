@@ -16,11 +16,16 @@ const listStyle = css`
 `;
 
 const linkStyle = css`
-    font-size: 24px;
+    font-size: 1.5rem;
     text-decoration: none;
     color: grey;
+
     @media (max-width: 420px) {
-        font-size: 18px;
+        font-size: 1.1rem;
+    }
+
+    @media (min-width: 2000px) {
+        font-size: 3rem;
     }
 `;
 

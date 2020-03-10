@@ -42,12 +42,4 @@ export default css`
     h6 {
         text-transform: uppercase;
     }
-
-    .sidebar {
-        width: 350px;
-        margin-right: 10%;
-    }
-    .main {
-        width: 50%;
-    }
 `;

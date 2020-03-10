@@ -37,6 +37,10 @@ const NameBlock = styled.div`
         font-size: 48px;
         font-weight: 300;
         margin: 0 0 30px 0;
+
+        @media (min-width: 2000px) {
+            font-size: 5rem;
+        }
     }
 
     @media (max-width: 420px) {
@@ -62,6 +66,10 @@ const BlackSquare = styled.div`
 
     & h2 {
         font-size: 36px;
+
+        @media (min-width: 2000px) {
+            font-size: 4rem;
+        }
     }
 
     & p,
@@ -72,54 +80,79 @@ const BlackSquare = styled.div`
         line-height: 1.4;
     }
 
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+    }
+
     @media (max-width: 420px) {
         margin-right: 0;
         padding: 20px;
         font-size: 16px;
-        flex-wrap: wrap;
+    }
 
-        .main {
-            width: 100%;
-        }
+    @media (min-width: 2000px) {
+        margin-right: 10%;
+        font-size: 2.3rem;
     }
 `;
 
 const Sidebar = styled.aside`
+    width: 350px;
+    margin-right: 10%;
     margin-bottom: 0;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    @media (min-width: 2000px) {
+        width: 30%;
+    }
 `;
 
 const Main = styled.main`
+    width: 50%;
     margin-top: -20px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 const ContentWrapper = styled.div`
     margin-bottom: 50px;
 
+    @media (max-width: 420px) {
+        margin-bottom: 30px;
+    }
+
     & p {
         margin: 0 0 10px;
+
+        @media (max-width: 420px) {
+            margin: 0;
+        }
+    }
+
+    & h2 {
+        @media (max-width: 420px) {
+            font-size: 2rem;
+        }
     }
 
     & h3,
     & h4 {
         font-size: 24px;
         margin: 0 0 5px 0;
-    }
 
-    @media (max-width: 420px) {
-        margin-bottom: 30px;
-
-        & h2 {
-            font-size: 30px;
-        }
-
-        & p {
-            margin: 0;
-        }
-
-        & h3,
-        & h4 {
+        @media (max-width: 420px) {
             font-size: 18px;
             margin: 0 0 5px 0;
+        }
+
+        @media (min-width: 2000px) {
+            font-size: 3rem;
         }
     }
 `;
