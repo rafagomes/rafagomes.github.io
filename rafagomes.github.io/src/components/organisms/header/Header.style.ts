@@ -1,7 +1,9 @@
 import { css } from "@emotion/core";
 
 export const headerStyle = css`
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     padding: 20px 20px 0 50px;
     margin-top: 0;
     background: white;
@@ -17,6 +19,7 @@ export const headerStyle = css`
 
     @media (max-width: 420px) {
         padding: 5px 20px 0 20px;
+        width: calc(100% - 40px);
         height: 50px;
     }
 

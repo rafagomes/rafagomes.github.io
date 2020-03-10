@@ -7,6 +7,16 @@ export default css`
         font-weight: 400;
     }
 
+    body {
+        padding-top: 80px;
+        @media (max-width: 420px) {
+            padding-top: 50px;
+        }
+        @media (min-width: 2000px) {
+            padding-top: 150px;
+        }
+    }
+
     h1,
     h2,
     h3,
