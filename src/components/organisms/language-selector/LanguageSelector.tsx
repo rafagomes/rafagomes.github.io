@@ -1,38 +1,6 @@
 import React, { ReactElement, useContext } from "react";
-import { css } from "@emotion/core";
 import { LanguageContext } from "../../../contexts/LanguageContext";
-
-const listContainer = css`
-    display: flex;
-    padding-left: 0;
-    justify-content: space-between;
-    @media (max-width: 420px) {
-        padding: 0 10px;
-    }
-`;
-
-const listStyle = css`
-    list-style: none;
-`;
-
-const linkStyle = css`
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: grey;
-
-    @media (max-width: 420px) {
-        font-size: 1.1rem;
-    }
-
-    @media (min-width: 2000px) {
-        font-size: 3rem;
-    }
-`;
-
-const activeLanguage = css`
-    ${linkStyle};
-    color: black;
-`;
+import { linkStyle, listContainer, listStyle, activeLanguage } from "./LanguageSelector.style";
 
 function LanguageSelector(): ReactElement {
     const { language, setLanguage } = useContext(LanguageContext);

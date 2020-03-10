@@ -1,72 +1,12 @@
 import React, { Fragment, useContext, ReactElement } from "react";
 import { Link } from "react-router-dom";
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
 import moment from "moment";
 
 import Greeting from "../../molecules/greetings";
 import ArrowLink from "../../atoms/arrow";
 import resumeContent from "../../../resume-content/resume.json";
 import { LanguageContext } from "../../../contexts/LanguageContext";
-
-const LinkStyle = css`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    margin-left: 100px;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 24px;
-
-    @media (max-width: 420px) {
-        display: none;
-    }
-
-    @media (min-width: 2000px) {
-        font-size: 3.5rem;
-    }
-`;
-
-const BlackSquare = styled.div`
-    display: flex;
-    position: absolute;
-    height: 50vh;
-    width: 100%;
-    bottom: 0;
-    justify-content: center;
-    right: 150px;
-    background-color: black;
-    align-items: flex-end;
-
-    @media (max-width: 420px) {
-        right: 0;
-        height: 65vh;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    @media (min-width: 2000px) {
-        right: 10%;
-        font-size: 2.3rem;
-    }
-`;
-
-const ContactMobile = styled.div`
-    font-size: 18px;
-    color: white;
-    margin-left: 20px;
-    align-self: flex-start;
-    justify-self: flex-start;
-
-    & h4 {
-        font-weight: 300;
-    }
-
-    @media (min-width: 421px) {
-        display: none;
-    }
-`;
+import { BlackSquare, ContactMobile, LinkStyle } from "./Home.style";
 
 function Home(): ReactElement {
     const { language } = useContext(LanguageContext);

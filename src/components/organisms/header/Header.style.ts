@@ -11,10 +11,15 @@ export const headerStyle = css`
         list-style: none;
     }
 
+    @media (max-width: 1000px) {
+        padding-left: 20px;
+    }
+
     @media (max-width: 420px) {
-        padding: 5px 20px 0 5%;
+        padding: 5px 20px 0 20px;
         height: 50px;
     }
+
     @media (min-width: 2000px) {
         height: 130px;
     }
@@ -26,6 +31,7 @@ export const rowList = css`
     padding-left: 0;
     flex-direction: row;
     justify-content: space-between;
+
     @media (max-width: 420px) {
         a {
             font-size: 16px;
