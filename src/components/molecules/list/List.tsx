@@ -19,6 +19,7 @@ function List({ ListType = "ul", isNav = false, items, ...otherProps }: Props): 
     const renderListItems = (): ReactNode => {
         return items.map((item: ListItem, index: number) => {
             const { text, ...itemProps } = item;
+
             if (itemProps.link) {
                 return (
                     <li key={index}>
@@ -26,6 +27,7 @@ function List({ ListType = "ul", isNav = false, items, ...otherProps }: Props): 
                     </li>
                 );
             }
+
             return <li key={index}>{item}</li>;
         });
     };

@@ -7,14 +7,14 @@ export const NameBlock = styled.div`
     color: black;
     background: white;
     margin-left: -50px;
-    padding: 40px 0 20px 50px;
+    padding: 20px 0 20px 50px;
     margin-bottom: 55px;
 
     & h1,
     & h2 {
         font-size: 48px;
         font-weight: 300;
-        margin: 0 0 30px 0;
+        margin: 0 0 5px 0;
 
         @media (min-width: 2000px) {
             font-size: 5rem;
@@ -133,4 +133,9 @@ export const ContentWrapper = styled.div`
             font-size: 3rem;
         }
     }
+`;
+
+export const DateParagraph = styled.p`
+    font-size: 1.2rem;
+    text-transform: uppercase;
 `;

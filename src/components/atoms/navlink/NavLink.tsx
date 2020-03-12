@@ -27,6 +27,7 @@ function NavLink(props: NavLinkProps): ReactElement {
     const { children } = props;
     const { to, external, onClick, ...otherLinkProps } = props.linkProps;
 
+    console.log(onClick);
     const renderLink = (): ReactElement => {
         if (external) {
             return (

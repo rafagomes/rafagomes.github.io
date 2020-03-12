@@ -3,7 +3,7 @@ import resumeContent from "../../../resume-content/resume.json";
 import { LanguageContext } from "../../../contexts/LanguageContext";
 import Heading from "../../atoms/heading";
 import List from "../../molecules/list";
-import { BlackSquare, ContentWrapper, Main, NameBlock, Sidebar } from "./Resume.style";
+import { BlackSquare, ContentWrapper, Main, NameBlock, Sidebar, DateParagraph } from "./Resume.style";
 
 interface TypeSidebar {
     title: string;
@@ -43,7 +43,7 @@ function Resume(): ReactElement {
             <ContentWrapper key={index}>
                 <Heading rank="3">{item.title}</Heading>
                 <Heading rank="4">{item.subtitle}</Heading>
-                <p>{item.date}</p>
+                <DateParagraph>({item.date})</DateParagraph>
                 {item.description ? <p>{item.description}</p> : ""}
             </ContentWrapper>
         ));

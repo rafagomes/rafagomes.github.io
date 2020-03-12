@@ -3,7 +3,6 @@ import { LinkProps } from "../../atoms/navlink/NavLink";
 import { headerStyle, rowList } from "./Header.style";
 
 interface List {
-    text: string;
     menuLinks: LinkProps[];
 }
 

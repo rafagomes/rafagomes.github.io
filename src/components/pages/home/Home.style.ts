@@ -30,6 +30,11 @@ export const BlackSquare = styled.div`
     right: 150px;
     background-color: black;
     align-items: flex-end;
+    transition: 1s height;
+
+    &.transition {
+        height: 100vh;
+    }
 
     @media (max-width: 420px) {
         right: 0;

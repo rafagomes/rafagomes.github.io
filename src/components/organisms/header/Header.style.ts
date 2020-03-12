@@ -3,6 +3,7 @@ import { css } from "@emotion/core";
 export const headerStyle = css`
     position: fixed;
     top: 0;
+    z-index: 10;
     width: 100%;
     padding: 20px 20px 0 50px;
     margin-top: 0;

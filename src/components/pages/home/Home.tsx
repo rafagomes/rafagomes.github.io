@@ -7,9 +7,12 @@ import ArrowLink from "../../atoms/arrow";
 import resumeContent from "../../../resume-content/resume.json";
 import { LanguageContext } from "../../../contexts/LanguageContext";
 import { BlackSquare, ContactMobile, LinkStyle } from "./Home.style";
+import { AnimationContext } from "../../../contexts/AnimationContext";
 
 function Home(): ReactElement {
     const { language } = useContext(LanguageContext);
+    const { animation } = useContext(AnimationContext);
+
     const { title, subtitle, linkToResume } = resumeContent[language].greetings;
 
     const getMyAge = (): string => {
@@ -20,7 +23,7 @@ function Home(): ReactElement {
     return (
         <Fragment>
             <Greeting key="Greeting" presentation={title} greeting={subtitle} />
-            <BlackSquare>
+            <BlackSquare className={animation}>
                 <ContactMobile>
                     <h4>Location: Rio de Janeiro/Brazil</h4>
                     <h4>Timezone: UTC-3</h4>

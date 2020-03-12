@@ -1,3 +1,8 @@
 import React from "react";
 
-export const LanguageContext = React.createContext({ language: "en", setLanguage: () => {} });
+const value: { language: string; setLanguage: React.Dispatch<React.SetStateAction<string>> } = {
+    language: "en",
+    setLanguage: () => {},
+};
+
+export const LanguageContext = React.createContext(value);

@@ -19,6 +19,13 @@
                 }
             },
             {
+                "text": "Blog",
+                "link": {
+                    "to": "https://blog.rafagomes.dev",
+                    "external": true
+                }
+            },
+            {
                 "text": "Linkedin",
                 "link": {
                     "to": "https://www.linkedin.com/in/rafagomesdev/",
@@ -152,6 +159,13 @@
                 "text": "Currículo",
                 "link": {
                     "to": "/resume"
+                }
+            },
+            {
+                "text": "Blog",
+                "link": {
+                    "to": "https://blog.rafagomes.dev",
+                    "external": true
                 }
             },
             {

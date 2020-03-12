@@ -3,6 +3,7 @@ import { Route, RouteProps } from "react-router-dom";
 import styled from "@emotion/styled";
 import Header from "../../organisms/header";
 import { LanguageContext } from "../../../contexts/LanguageContext";
+import { AnimationContext } from "../../../contexts/AnimationContext";
 import LanguageSelector from "../../organisms/language-selector";
 import resumeContent from "../../../resume-content/resume.json";
 
@@ -26,18 +27,31 @@ const Footer = styled.footer`
 
 function MainTemplate(props: RouteProps): ReactElement {
     const [language, setLanguage] = useState("en");
-    const value = { language, setLanguage };
+    const [animation, setAnimation] = useState("");
+
+    const languageValue = { language, setLanguage };
+    const animationValue = { animation, setAnimation };
+
     const { menuLinks } = resumeContent[language];
+
+    const menuLinkswithonClick = menuLinks.map(item => {
+        if (item.text === "Resume") {
+            item.onClick = () => setAnimation("active");
+        }
+        return item;
+    });
 
     return (
         <Fragment>
-            <LanguageContext.Provider value={value}>
-                <Header menuLinks={menuLinks} />
-                <Route {...props} />
-                <Footer>
-                    <LanguageSelector />
-                </Footer>
-            </LanguageContext.Provider>
+            <AnimationContext.Provider value={animationValue}>
+                <LanguageContext.Provider value={languageValue}>
+                    <Header menuLinks={menuLinkswithonClick} />
+                    <Route {...props} />
+                    <Footer>
+                        <LanguageSelector />
+                    </Footer>
+                </LanguageContext.Provider>
+            </AnimationContext.Provider>
         </Fragment>
     );
 }
