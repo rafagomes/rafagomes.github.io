@@ -3,26 +3,10 @@ import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
     margin-left: 50px;
-    margin-top: 5%;
+    margin-top: calc(100vh / 3.5);
 
     @media (max-width: 1000px) {
         margin-left: 20px;
-    }
-
-    @media (max-width: 1000px) and (min-width: 700px) {
-        margin-top: 10%;
-    }
-
-    @media (max-width: 700px) and (min-width: 421px) {
-        margin-top: 18%;
-    }
-
-    @media (max-width: 420px) {
-        margin-top: 12%;
-    }
-
-    @media (min-width: 2000px) {
-        margin-top: 7%;
     }
 `;
 
