@@ -23,7 +23,7 @@ function Home(): ReactElement {
     return (
         <Fragment>
             <Greeting key="Greeting" presentation={title} greeting={subtitle} />
-            <BlackSquare className={animation}>
+            {/* <BlackSquare className={animation}>
                 <ContactMobile>
                     <h4>Location: Rio de Janeiro/Brazil</h4>
                     <h4>Timezone: UTC-3</h4>
@@ -36,7 +36,7 @@ function Home(): ReactElement {
                     {linkToResume}
                     <ArrowLink />
                 </Link>
-            </BlackSquare>
+            </BlackSquare> */}
         </Fragment>
     );
 }
