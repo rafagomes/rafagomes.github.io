@@ -43,28 +43,33 @@
         "sidebar": [
             {
                 "title": "Contact",
-                "content": ["+55 ( 21) 9 7521-6516", "rafaelgomes.web@gmail.com", "linkedin.com/in/rafagomesdev"]
+                "content": [
+                    "+55 ( 21) 9 7521-6516",
+                    "rafaelgomes.web@gmail.com",
+                    "linkedin.com/in/rafagomesdev",
+                    "github.com/rafagomes"
+                ]
             },
             {
                 "title": "Profile",
                 "content": {
-                    "text": "I've been working with software development my entire life. In the past 13 years I have worked with amazing teammates delivering complex projects for some huge clients like Verizon, Coca-cola, American Express and top 10 major companies in Brazil. Programming is my passion."
+                    "text": "Front-end engineer with 15 years of experience, working for big clients and delivering professional and quality projects using modern stacks and methodologies."
                 }
             },
             {
                 "title": "Hard Skills",
                 "content": [
                     "Javascript, Typescript",
-                    "CSS, Sass, Stylus, Less",
+                    "Sass, Styled components, Emotion",
                     "Html, Pug",
-                    "Angular, React, Vue",
-                    "Ionic, React Native",
-                    "TDD, Jasmine, Jest",
+                    "React, React Native",
+                    "Context, Redux",
+                    "Jest, Enzyme, Jasmine",
+                    "Docker and Kubernetes",
                     "Node.js, Express",
                     "MongoDB, MySQL",
                     "Python, Flask, Django",
                     "Linux Administration",
-                    "AWS EC2 management",
                     "Agile, Kanban, Scrum",
                     "Management, Leadership"
                 ]
@@ -76,51 +81,45 @@
                 "content": [
                     {
                         "title": "Technology Manager",
-                        "subtitle": "Accenture",
+                        "subtitle": "Accenture - Tropikal",
                         "date": "Jan 2018 - present",
-                        "description": "My role at Accenture is a combination between team management and technical leadership, with a goal to drive our team to deliver excelent products for our clients."
-                    },
-                    {
-                        "title": "Technology Director",
-                        "subtitle": "Tropikal",
-                        "date": "Jan 2018 - present",
-                        "description": "Tropikal is part of Accenture and here I have the director's responsabilities about the group."
+                        "description": "Leading and delivering tested applications using React and Angular to the biggest customers, improving the product experience through better codes and interactions."
                     },
                     {
                         "title": "Technology Lead",
                         "subtitle": "Huge inc.",
                         "date": "Jan 2017 - Dec 2017",
-                        "description": "This was a mixed role, part management and technical. Some of the featured participations were two major projects for banks."
+                        "description": "Front-end leadership and development, using modern stacks like Angular and React. Complex challenges like delivering a internet banking new experience for a international client."
+                    },
+                    {
+                        "title": "Senior developer",
+                        "subtitle": "Huge inc.",
+                        "date": "Jul 2015 - Jan 2017",
+                        "description": "Front-end development for clients like American Express and top 10 biggest companies in Brazil using semantic HTML5, Sass and Javascript, with advanced accessibility and SEO concepts."
                     },
                     {
                         "title": "Software development manager",
                         "subtitle": "Parafernalia Interativa",
                         "date": "Mar 2013 - Jul 2015",
-                        "description": "Leading and developing applications for our clients. Here I was responsible for sales, business management and technical scope. Not ideal, but worked for some time."
+                        "description": "Leading and developing applications for challenging clients, understanding and translating necessities to quality and top notch applications, using Angular and Node.js."
                     },
                     {
                         "title": "Senior Front-end developer",
                         "subtitle": "Huge inc.",
                         "date": "Sep 2011 - Mar 2013",
-                        "description": "Working at Huge is always a great experience. I was responsible for programming some beautiful user centric projects and outstandign prototypes."
+                        "description": "Front-end development using pure and structured Javascript in the biggest telecom client in Brazil, sales improving and the client relationship through better customer support websites."
                     },
                     {
                         "title": "Senior Web developer",
                         "subtitle": "6d",
                         "date": "Sep 2010 - Sep 2011",
-                        "description": "Some of my most enjoyable work was made here. Flash and Javascript for fashion companies, focused on design and style. At 6d I started to work more seriously with backend, CMS like Drupal and Wordpress."
+                        "description": "Full stack applications of seasonal websites for fashion companies, creating end-to-end products, such as portals and institutional websites, using pure Javascript and Drupal as tools."
                     },
                     {
                         "title": "Web developer",
                         "subtitle": "Kaus Midia",
                         "date": "Jun 2009 - Sep 2010",
-                        "description": "Development in a fast pace, focused on extreme delivery. At Kaus I was able to create more proccess, organization and code reusability."
-                    },
-                    {
-                        "title": "Flash Developer",
-                        "subtitle": "Some companies",
-                        "date": "Sep 2007 - Jun 2009",
-                        "description": "Working as flash developer in a couple of companies, delivering Adobe Flex and Flash websites fully coded in Action Script 3. At this time, working with RIA applications was amazing..."
+                        "description": "Development in a fast pace environment, focused on extreme delivery, making custom frameworks to speed development focused on code reuse and patterns."
                     }
                 ]
             },
@@ -130,15 +129,13 @@
                     {
                         "title": "INCOMPLETE BACHELOR IN ANALYSIS AND DEVELOPMENT",
                         "subtitle": "ESTACIO UNIVERSITY",
-                        "date": "2000 - 2003"
+                        "date": ""
                     }
                 ]
             },
             {
                 "title": "Awards",
-                "content": [
-                    { "title": "INTRANET DESIGN ANNUAL AWARD", "subtitle": "NIELSEN NORMAN GROUP", "date": "JAN 2013" }
-                ]
+                "content": [{ "title": "INTRANET DESIGN ANNUAL AWARD", "subtitle": "NIELSEN NORMAN GROUP", "date": "" }]
             }
         ]
     },
@@ -186,28 +183,33 @@
         "sidebar": [
             {
                 "title": "Contato",
-                "content": ["+55 ( 21) 9 7521-6516", "rafaelgomes.web@gmail.com", "linkedin.com/in/rafagomesdev"]
+                "content": [
+                    "+55 ( 21) 9 7521-6516",
+                    "rafaelgomes.web@gmail.com",
+                    "linkedin.com/in/rafagomesdev",
+                    "github.com/rafagomes"
+                ]
             },
             {
-                "title": "Sobre",
+                "title": "Perfil",
                 "content": {
-                    "text": "I've been working with software development my entire life. In the past 13 years I have worked with amazing teammates delivering complex projects for some huge clients like Verizon, Coca-cola, American Express and top 10 major companies in Brazil. Programming is my passion."
+                    "text": "Engenheiro Front-end com 15 anos de experiência, trabalhando com grandes clientes, entregando projetos com qualidade e stacks e metodologias modernas."
                 }
             },
             {
                 "title": "Hard Skills",
                 "content": [
                     "Javascript, Typescript",
-                    "CSS, Sass, Stylus, Less",
+                    "Sass, Styled components, Emotion",
                     "Html, Pug",
-                    "Angular, React, Vue",
-                    "Ionic, React Native",
-                    "TDD, Jasmine, Jest",
+                    "React, React Native",
+                    "Context, Redux",
+                    "Jest, Enzyme, Jasmine",
+                    "Docker and Kubernetes",
                     "Node.js, Express",
                     "MongoDB, MySQL",
                     "Python, Flask, Django",
                     "Linux Administration",
-                    "AWS EC2 management",
                     "Agile, Kanban, Scrum",
                     "Management, Leadership"
                 ]
@@ -218,52 +220,46 @@
                 "title": "Experiência",
                 "content": [
                     {
-                        "title": "Gerente de Tecnologia",
-                        "subtitle": "Accenture",
-                        "date": "Jan 2018 - atualmente",
-                        "description": "Meu papel na Accenture é uma combinação entre um líder técnico e um gestor, com o objetivo de direcionar o time para entregar excelentes podutos para nossos clientes."
+                        "title": "Technology Manager",
+                        "subtitle": "Accenture - Tropikal",
+                        "date": "Jan 2018 - present",
+                        "description": "Liderando e entregando aplicações testadas usando React e Angular para os maiores clientes, melhorando a experiência dos produtos através de melhores códigos e interações."
                     },
                     {
-                        "title": "Diretor de tecnologia",
-                        "subtitle": "Tropikal",
-                        "date": "Jan 2018 - atualmente",
-                        "description": "Tropikal é parte da Accetnure aqui eu acabo ficando com as responsabilidades de um diretor de um grupo."
-                    },
-                    {
-                        "title": "Líder técnico",
+                        "title": "Technology Lead",
                         "subtitle": "Huge inc.",
-                        "date": "Jan 2017 - Dez 2017",
-                        "description": "Este foi um papel complexo, também uma combinação entre gestor e técnico. Algumas participações importantes foi o desenvolvimento de dois grandes projetos de bancos e sites para grandes marcas internacionais."
+                        "date": "Jan 2017 - Dec 2017",
+                        "description": "Liderança e desenvolvimento front-end, usando stacks modernas como Angular e React. Complexos desafios como oferecer uma nova experiência de Internet banking para um banco internacional."
                     },
                     {
-                        "title": "Gestor de tecnologia e Sócio",
+                        "title": "Senior developer",
+                        "subtitle": "Huge inc.",
+                        "date": "Jul 2015 - Jan 2017",
+                        "description": "Desenvolvimento Front-end para clientes como American Express e top 10 maiores empresas do Brasil, usando HTML5 semântico, Sass e Javascript, com conceitos avançados de acesibilidade e SEO."
+                    },
+                    {
+                        "title": "Software development manager",
                         "subtitle": "Parafernalia Interativa",
                         "date": "Mar 2013 - Jul 2015",
-                        "description": "Liderando e desenvolvendo aplicações para nossos clientes. Fui responsável por vendas, desenvolvimento de novos negócios, gestor e líder técnico."
+                        "description": "Liderando e desenvolvendo aplicativos para clientes desafiadores, entendendo e traduzindo necessidades em aplicativos de qualidade e de alto nível, usando Angular e Node.js."
                     },
                     {
                         "title": "Senior Front-end developer",
                         "subtitle": "Huge inc.",
-                        "date": "Set 2011 - Mar 2013",
-                        "description": "Trabalhar na Huge sempre foi uma grande experiência, já que desenvolvemos grandes projetos, tanto nacionalmente como internacionalmente. Fui responsável por programar projetos com foco no usuário e grandes interações utilizando frameworks de ponta."
+                        "date": "Sep 2011 - Mar 2013",
+                        "description": "Desenvolvimento de front-end usando Javascript puro e estruturado no maior cliente de telecomunicações do Brasil, melhorando as vendas e o relacionamento com o cliente através de melhores sites de suporte ao cliente."
                     },
                     {
                         "title": "Senior Web developer",
                         "subtitle": "6d",
-                        "date": "Set 2010 - Set 2011",
-                        "description": "Um dos lugares que tenho muito carinho. Flash e Javascript para o desenvolvimento de projetos na área de moda, focado em design e estilo. Na 6d eu comecei a trabalhar mais sério com Backend utilizando Drupal como CMS, CodeIgnite e Wordpress."
+                        "date": "Sep 2010 - Sep 2011",
+                        "description": "Aplicativos full stack de websites sazonais para empresas de moda, criando produtos de ponta a ponta, como portais e sites institucionais, usando Javascript puro e Drupal como ferramentas."
                     },
                     {
                         "title": "Web developer",
                         "subtitle": "Kaus Midia",
-                        "date": "Jun 2009 - Set 2010",
-                        "description": "Desenvolvimento em ritmo rápido com entregas agressivas. Na Kaus nós desenvolvemos diversos processos de reaproveitiamento de códigos. Lá nós desenvolvíamos sites menores, mas em grande número. Dentre os maiores destaques ficam projetos como o Criança esperança e projetos de votação."
-                    },
-                    {
-                        "title": "Flash Developer",
-                        "subtitle": "Algumas empresas menores",
-                        "date": "Set 2007 - Jun 2009",
-                        "description": "Trabalhando como desenvolvedor Flash em algumas empresas. Tive a oportunidade de desenvolver com Adobe Flex e criar muitas experiências com ActionScript 3. Nessa época, RIA era o grande nome."
+                        "date": "Jun 2009 - Sep 2010",
+                        "description": "Desenvolvimento em um ambiente de ritmo acelerado, focado na entrega extrema, criando frameworks customizados para acelerar o desenvolvimento focado na reutilização e padrões de código."
                     }
                 ]
             },
@@ -273,15 +269,13 @@
                     {
                         "title": "Análise e Desenvolvimento de sistemas",
                         "subtitle": "Universidade Estácio",
-                        "date": "2000 - 2003"
+                        "date": ""
                     }
                 ]
             },
             {
                 "title": "Prêmios",
-                "content": [
-                    { "title": "INTRANET DESIGN ANNUAL AWARD", "subtitle": "NIELSEN NORMAN GROUP", "date": "JAN 2013" }
-                ]
+                "content": [{ "title": "INTRANET DESIGN ANNUAL AWARD", "subtitle": "NIELSEN NORMAN GROUP", "date": "" }]
             }
         ]
     }

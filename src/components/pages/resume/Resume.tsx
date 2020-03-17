@@ -43,7 +43,7 @@ function Resume(): ReactElement {
             <ContentWrapper key={index}>
                 <Heading rank="3">{item.title}</Heading>
                 <Heading rank="4">{item.subtitle}</Heading>
-                <DateParagraph>({item.date})</DateParagraph>
+                {item.date !== "" ? <DateParagraph>({item.date})</DateParagraph> : <span />}
                 {item.description ? <p>{item.description}</p> : ""}
             </ContentWrapper>
         ));
