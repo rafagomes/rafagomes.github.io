@@ -60,17 +60,16 @@
                 "title": "Hard Skills",
                 "content": [
                     "Javascript, Typescript",
-                    "Sass, Styled components, Emotion",
-                    "Html, Pug",
-                    "React, React Native",
-                    "Context, Redux",
-                    "Jest, Enzyme, Jasmine",
-                    "Docker and Kubernetes",
-                    "Node.js, Express",
-                    "MongoDB, MySQL",
+                    "Mui, Emotion, Styled components,",
+                    "React, Next.js, React Native",
+                    "Jest, Playground, Enzyme, Jasmine",
+                    "Docker, Kubernetes and AWS Serverless",
+                    "Node.js, Nestjs, Express",
+                    "MongoDB, Postgres, MySQL",
                     "Python, Flask, Django",
-                    "Linux Administration",
+                    "Linux Administration: Fedora and Arch",
                     "Agile, Kanban, Scrum",
+                    "Ethical Hacking and Security",
                     "Management, Leadership"
                 ]
             }
@@ -80,9 +79,21 @@
                 "title": "Experience",
                 "content": [
                     {
+                        "title": "Lead Fullstack Engineer",
+                        "subtitle": "Gateway",
+                        "date": "Jul 2022 - present",
+                        "description": "We are delivering fast and user-driven products with a top-notch technology stack. Responsible for creating a brand new experience for products in the Web3 industry."
+                    },
+                    {
+                        "title": "Lead Fullstack Engineer",
+                        "subtitle": "Justpoint",
+                        "date": "Jul 2020 - Jul 2022",
+                        "description": "Developing new experiences to help our customers ease their burden. Helping to solve the biggest pain point in the medical malpractice industry – the high cost of medical-legal discovery."
+                    },
+                    {
                         "title": "Technology Manager",
                         "subtitle": "Accenture - Tropikal",
-                        "date": "Jan 2018 - present",
+                        "date": "Jan 2018 - Jul 2020",
                         "description": "Leading and delivering tested applications using React and Angular to the biggest customers, improving the product experience through better codes and interactions."
                     },
                     {
