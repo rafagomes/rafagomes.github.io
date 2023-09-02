@@ -19,9 +19,9 @@
                 }
             },
             {
-                "text": "Blog",
+                "text": "Articles",
                 "link": {
-                    "to": "https://blog.rafagomes.dev",
+                    "to": "https://medium.com/@rafagomes",
                     "external": true
                 }
             },
