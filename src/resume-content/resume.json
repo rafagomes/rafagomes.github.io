@@ -31,13 +31,6 @@
                     "to": "https://www.linkedin.com/in/rafagomesdev/",
                     "external": true
                 }
-            },
-            {
-                "text": "Twitter",
-                "link": {
-                    "to": "https://twitter.com/rafagomes_dev",
-                    "external": true
-                }
             }
         ],
         "sidebar": [
@@ -146,7 +139,13 @@
             },
             {
                 "title": "Awards",
-                "content": [{ "title": "INTRANET DESIGN ANNUAL AWARD", "subtitle": "NIELSEN NORMAN GROUP", "date": "" }]
+                "content": [
+                    {
+                        "title": "INTRANET DESIGN ANNUAL AWARD",
+                        "subtitle": "NIELSEN NORMAN GROUP",
+                        "date": ""
+                    }
+                ]
             }
         ]
     },
@@ -286,7 +285,13 @@
             },
             {
                 "title": "Prêmios",
-                "content": [{ "title": "INTRANET DESIGN ANNUAL AWARD", "subtitle": "NIELSEN NORMAN GROUP", "date": "" }]
+                "content": [
+                    {
+                        "title": "INTRANET DESIGN ANNUAL AWARD",
+                        "subtitle": "NIELSEN NORMAN GROUP",
+                        "date": ""
+                    }
+                ]
             }
         ]
     }
