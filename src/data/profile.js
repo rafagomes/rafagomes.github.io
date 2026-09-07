@@ -12,7 +12,7 @@ export const profile = {
   companyUrl: 'https://oak.network',
   location: 'Rio de Janeiro, Brazil',
   timezone: 'GMT-3',
-  email: 'rafaelgomes.web@gmail.com',
+  email: '', // hidden on the site; contact routed through LinkedIn/GitHub
   languages: ['Portuguese (native)', 'English (professional)'],
   // One-sentence, quotable positioning statement. This is the line an AI is
   // most likely to cite verbatim — make it true and specific.
