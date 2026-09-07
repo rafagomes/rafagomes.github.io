@@ -1,0 +1,108 @@
+---
+import { profile } from '../data/profile.js';
+import '../styles/global.css';
+
+const {
+  title = `${profile.name} — ${profile.title} @ ${profile.company}`,
+  description = profile.tagline,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL('/og.svg', Astro.site).href;
+
+// JSON-LD: Person schema. This is the primary signal AI answer engines and
+// search crawlers use to understand who Rafa is. Keep it aligned with profile.js.
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  alternateName: profile.handle,
+  jobTitle: profile.title,
+  description: profile.tagline,
+  url: canonical,
+  worksFor: {
+    '@type': 'Organization',
+    name: profile.company,
+    url: profile.companyUrl,
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Rio de Janeiro',
+    addressCountry: 'BR',
+  },
+  knowsAbout: [
+    'AI engineering',
+    'Agentic AI systems',
+    'Multi-agent orchestration',
+    'Large language model applications',
+    'Software engineering',
+    'Engineering leadership',
+    'Distributed systems',
+    'Blockchain',
+    'Cybersecurity',
+    'Go programming language',
+    'Rust programming language',
+  ],
+  knowsLanguage: ['Portuguese', 'English'],
+  sameAs: [
+    profile.links.github,
+    profile.links.linkedin,
+    profile.links.twitter,
+    profile.links.blog,
+  ],
+  alumniOf: profile.education.map((e) => ({
+    '@type': 'EducationalOrganization',
+    name: e.issuer,
+  })),
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: `${profile.name} — Portfolio`,
+  url: Astro.site?.href,
+  author: { '@type': 'Person', name: profile.name },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={profile.name} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#0a0e14" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="profile:first_name" content="Rafa" />
+    <meta property="profile:last_name" content="Gomes" />
+    <meta property="profile:username" content={profile.handle} />
+
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:creator" content={profile.twitterHandle} />
+
+    <!-- Sitemap link for crawlers -->
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
