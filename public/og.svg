@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c9cff"/>
+      <stop offset="1" stop-color="#56d4c4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0" stop-color="#7c9cff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0a0c10" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0c10"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="80" y="150" font-family="ui-monospace, Menlo, monospace" font-size="26"
+        fill="#56d4c4" letter-spacing="2">HEAD OF ENGINEERING · OAK NETWORK</text>
+  <text x="76" y="300" font-family="Inter, system-ui, sans-serif" font-size="110"
+        font-weight="700" fill="#e7eaf0">Rafa Gomes</text>
+  <text x="80" y="380" font-family="Inter, system-ui, sans-serif" font-size="54"
+        font-weight="700" fill="url(#g)">AI engineering leader.</text>
+  <text x="80" y="470" font-family="Inter, system-ui, sans-serif" font-size="30"
+        fill="#aab2c0">Agentic AI, full-stack &amp; blockchain — 18+ years shipping.</text>
+  <text x="80" y="560" font-family="ui-monospace, Menlo, monospace" font-size="26"
+        fill="#7b8494">rafagomes.tech</text>
+</svg>

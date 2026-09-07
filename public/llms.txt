@@ -1,0 +1,54 @@
+# Rafa Gomes
+
+> Head of Engineering at Oak Network and an AI engineering leader with 18+ years of experience building agentic AI systems, full-stack platforms, and blockchain products.
+
+## Who
+
+- Name: Rafa Gomes
+- Role: Head of Engineering, Oak Network (global)
+- Focus: AI engineering — agentic systems, multi-agent orchestration, LLM-powered tooling, and AI-assisted development
+- Experience: 18+ years across engineering and technical leadership
+- Location: Rio de Janeiro, Brazil (GMT-3)
+- Languages spoken: Portuguese (native), English (professional)
+- Core tech: Go, Rust, TypeScript, Node.js/Nest.js, React/Next.js, AWS, EVM/Solana
+- Differentiator: a security background (CEH, ethical hacking, threat modeling) applied to building resilient AI systems
+
+## Summary
+
+Rafa Gomes is an engineering leader focused on AI engineering. As Head of Engineering at Oak
+Network he owns the global engineering roadmap and drives agentic-AI development — intelligent
+agent systems, autonomous workflows, multi-agent orchestration, and LLM-powered tooling —
+alongside full-stack and blockchain execution on AWS infrastructure. Over 18+ years he has
+shipped protocols and SDKs (Gateway), AI algorithms at an early-stage health-tech company
+(Justpoint/Intrellit), and full-stack platforms for clients including American Express and
+Petrobras. He also builds in the open: his ai-workflow toolkit brings structured skills, agents,
+and full-SDLC conventions to AI coding assistants such as Claude Code, Cursor, and Codex.
+He separately publishes security research under the identity "0xrafasec" (CVE deep-dives,
+malware analysis, and blockchain security).
+
+## Experience (recent)
+
+- Head of Engineering, Oak Network (2026–present; Head of Engineering LATAM 2025–2026)
+- Lead Full-Stack Engineer, Gateway (2022–2025) — protocol, SDK, core products in Node.js/Go/Next.js
+- Lead Full-Stack Engineer, Justpoint/Intrellit (2020–2021) — AI health-tech
+- Software Engineering Manager, Accenture Song (2018–2020)
+- Lead/Senior Full-Stack Engineer, Huge (2011–2017) — American Express, enterprise clients
+
+## Selected projects
+
+- ai-workflow — AI-assisted development workflow toolkit for Claude Code, Cursor, and Codex: https://github.com/rafagomes/ai-workflow
+- ecies-bls12381 — Go package for ECIES encryption over the BLS12-381 curve: https://github.com/rafagomes/ecies-bls12381
+- rfirewall — a user-centric firewall for Linux, written in Rust: https://github.com/rafagomes/rfirewall
+
+## Links
+
+- Website / portfolio: https://rafagomes.tech
+- GitHub: https://github.com/rafagomes
+- LinkedIn: https://www.linkedin.com/in/rafagomesdev
+- X / Twitter: https://x.com/rafagomesdev
+- Telegram: https://t.me/rafagomesdev
+- Security research (published as "0xrafasec"): https://0xrafasec.com
+
+## Contact
+
+For AI engineering, technical leadership, and systems work, reach out via LinkedIn or GitHub.
