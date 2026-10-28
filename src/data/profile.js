@@ -1,7 +1,9 @@
 // Single source of truth for the whole site.
 // Edit here → both the visible page and the JSON-LD structured data update.
 // Keep copy fact-dense and quotable: AI answer engines lift clean sentences from here.
-// Sourced from Rafa's LinkedIn export (Sep 2026) — real, not inferred.
+// Sourced from Rafa's LinkedIn export (Oct 2026) and his own figures — real, not inferred.
+// The downloadable public/resume.pdf is built in the private rafagomes/resume repo;
+// keep its facts in step with this file.
 
 export const profile = {
   name: 'Rafa Gomes',
@@ -12,169 +14,150 @@ export const profile = {
   companyUrl: 'https://oak.network',
   location: 'Rio de Janeiro, Brazil',
   timezone: 'GMT-3',
-  email: '', // hidden on the site; contact routed through LinkedIn/GitHub
-  languages: ['Portuguese (native)', 'English (professional)'],
+  startYear: 2007,
+  status: 'Open to Head of Engineering & CTO roles',
   // One-sentence, quotable positioning statement. This is the line an AI is
   // most likely to cite verbatim — make it true and specific.
   tagline:
-    'Rafa Gomes is Head of Engineering at Oak Network, leading global engineering and building agentic AI systems — multi-agent orchestration and LLM-powered tooling — on 18+ years of full-stack and blockchain experience.',
-  // Longer bio (2–3 short paragraphs). Semantic prose, not a keyword list.
-  about: [
-    'I am Head of Engineering at Oak Network, where I own the global engineering roadmap and operate at the intersection of business leadership and hands-on execution. I lead across full-stack, blockchain, and agentic-AI initiatives, holding accountability for team performance, architecture, and delivery across regions.',
-    'My current focus is AI engineering: I drive the design and implementation of intelligent agent systems — architecting autonomous workflows, multi-agent orchestration, and LLM-powered tooling that augment both our product and our internal engineering velocity. I also build in the open: my ai-workflow toolkit brings structured skills, agents, and full-SDLC conventions to AI coding assistants like Claude Code, Cursor, and Codex.',
-    'Across 18+ years I have shipped production software as an engineer and leader — protocols and SDKs at Gateway, AI algorithms at an early-stage health-tech company, and full-stack platforms for clients including American Express and Petrobras. A security background (CEH, ethical hacking, threat modeling) shapes how I design systems for resilience. I work primarily in Go, Rust, TypeScript, and Node.js.',
-  ],
+    'Rafa Gomes is Head of Engineering at Oak Network, taking agentic AI from prototype to production and building AI-native engineering teams, on 19 years of full-stack, blockchain and security experience.',
   links: {
     github: 'https://github.com/rafagomes',
     linkedin: 'https://www.linkedin.com/in/rafagomesdev',
     twitter: 'https://x.com/rafagomesdev',
     telegram: 'https://t.me/rafagomesdev',
-    // 0xrafasec is Rafa's separate security-research identity — kept as the "security" pillar.
+    // 0xrafasec is Rafa's separate security-research identity.
     blog: 'https://0xrafasec.com',
   },
   twitterHandle: '@rafagomesdev',
-  // Grouped so both humans and machines see structured competency areas.
-  skills: [
+  impact: [
+    { value: '19', label: 'years shipping software, builder first' },
+    { value: '25', label: 'engineers led across 3 countries' },
+    { value: '4', label: 'AI agents taken to production' },
+    { value: '10–15', label: 'PRs per engineer, per day — 100% AI-native team' },
+    { value: '1M', label: 'protocol users at Gateway, later acquired by Circle' },
+  ],
+  sides: [
     {
-      group: 'AI Engineering',
-      items: [
-        'Agentic systems',
-        'Multi-agent orchestration',
-        'LLM-powered tooling',
-        'Autonomous workflows',
-        'AI-assisted development',
-      ],
+      title: 'The systems we ship',
+      text: 'I own what decides whether an agent survives real usage: cost, observability and usage metrics, instrumented end to end. Four agents are in production with 3 major partners on revenue share.',
     },
     {
-      group: 'Leadership',
-      items: [
-        'Global engineering leadership',
-        'Technology management',
-        'Architecture (RFCs / PRDs)',
-        'Team building & mentorship',
-      ],
-    },
-    {
-      group: 'Languages & Frameworks',
-      items: ['Go', 'Rust', 'TypeScript', 'Node.js / Nest.js', 'React / Next.js', 'Flutter'],
-    },
-    {
-      group: 'Backend & Cloud',
-      items: ['Distributed systems', 'System architecture', 'AWS', 'CI/CD', 'API & SDK design'],
-    },
-    {
-      group: 'Blockchain',
-      items: ['EVM / Solidity', 'Solana', 'Smart contracts', 'Protocol design'],
-    },
-    {
-      group: 'Security',
-      items: ['Ethical hacking (CEH)', 'Threat modeling', 'Secure system design'],
+      title: 'How the team is built',
+      text: 'A 100% AI-native team on trunk-based delivery, working from PRDs, architecture and security docs. Cost and usage tracked per developer, held to a measured standard — not vibes.',
     },
   ],
+  // `major` roles get the heavier rule and larger title.
   experience: [
     {
+      period: '2025 — now',
       role: 'Head of Engineering',
       company: 'Oak Network',
-      period: '2026 — Present',
+      note: 'agentic broker for real estate',
+      major: true,
       summary:
-        'Own the global engineering roadmap. Drive agentic-AI development — intelligent agent systems, multi-agent orchestration, and LLM-powered tooling — alongside full-stack and blockchain execution and AWS infrastructure. Previously Head of Engineering, LATAM (2025–2026).',
+        'Head of Engineering LatAm from Feb 2025, global since Mar 2026. 25 engineers in 3 countries. 4 AI agents in production with 3 revenue-sharing partners. Rebuilt the team as 100% AI-native: from 3 environments to trunk-based, 10–15 PRs per engineer per day.',
     },
     {
-      role: 'Lead Full-Stack Engineer',
-      company: 'Gateway',
       period: '2022 — 2025',
+      role: 'Lead Full Stack Engineer',
+      company: 'Gateway',
+      note: 'later acquired by Circle',
+      major: true,
       summary:
-        'Hands-on lead building a protocol, SDK, and the company’s principal products in Node.js (Nest.js), Go, and Next.js.',
+        'Built the protocol, SDK and core products hands-on in Node.js, Go and Next.js while leading the team. The protocol reached 1M users with partners like the Solana Foundation; shipped private computing to production.',
     },
     {
-      role: 'Lead Full-Stack Engineer',
-      company: 'Justpoint / Intrellit',
+      period: '2021 — 2022',
+      role: 'Founder',
+      company: 'Self-employed',
+      note: 'web3 products',
+      summary:
+        'Launched NFT collections and blockchain products end to end: full-stack build, product strategy, community and marketing.',
+    },
+    {
       period: '2020 — 2021',
+      role: 'Lead Full Stack Engineer',
+      company: 'Justpoint',
+      note: 'New York',
       summary:
-        'Built product experiences at an AI health-tech company developing proprietary algorithms to comprehend medical records and accelerate legal discovery.',
+        'Built React and Node products around proprietary AI that reads medical records for medical-malpractice discovery.',
     },
     {
+      period: '2018 — 2020',
       role: 'Software Engineering Manager',
       company: 'Accenture Song',
-      period: '2018 — 2020',
       summary:
-        'Led delivery of tested React and Angular applications for major enterprise clients, improving product experience and engineering quality.',
+        'Managed 30 engineers shipping React and Angular products for XP Investimentos, Itaú, Gol, American Express and Coca-Cola.',
     },
     {
-      role: 'Lead / Senior Full-Stack Engineer',
-      company: 'Huge',
       period: '2015 — 2017',
+      role: 'Lead Full Stack Engineer',
+      company: 'Huge',
+      note: 'Senior Web Engineer → Lead',
       summary:
-        'Full-stack hands-on leadership with Node, React, and Angular — including an internet-banking experience and work for American Express and top Brazilian companies.',
+        "Internet banking for an international client; full-stack work for American Express and Brazil's top-10 companies.",
     },
     {
-      role: 'Earlier: Partner & Senior Engineer',
-      company: 'Parafernalia, HUGE Inc. & agencies',
-      period: '2007 — 2015',
+      period: '2013 — 2015',
+      role: 'Partner & Dev Manager',
+      company: 'Parafernalia Interactive',
       summary:
-        'Partner and software development manager, then senior full-stack roles delivering platforms for clients including Petrobras — spanning PHP, JavaScript, and rich interactive web.',
+        'Ran technical and business operations as a partner, from business development to solution architecture and hands-on delivery.',
+    },
+    {
+      period: '2007 — 2013',
+      role: 'Earlier',
+      company: 'Huge · 6D · Kaus Mídia · Add Technologies · casa56',
+      summary:
+        "Sites for Brazil's largest telecom and Veja SP (with ThoughtWorks), seasonal fashion platforms, and Flash/PHP campaigns for clients including Petrobras.",
     },
   ],
   projects: [
     {
       name: 'ai-workflow',
-      featured: true,
+      kind: 'Open source · Claude Code plugin',
       description:
-        'An AI-assisted development workflow toolkit for Claude Code, Cursor, and Codex — skills, agents, and conventions spanning the full software development lifecycle, so AI coding tools follow a repeatable engineering process.',
-      language: 'AI tooling',
+        'The process my team ships with, open-sourced: spec-driven, trunk-based delivery where agents build from the spec, a separate agent reviews it, and humans merge.',
       url: 'https://github.com/rafagomes/ai-workflow',
     },
     {
       name: 'ecies-bls12381',
-      description:
-        'Go package for keypair generation, encryption, and decryption using ECIES over the BLS12-381 elliptic curve.',
-      language: 'Go',
+      kind: 'Go',
+      description: 'Keypair generation, encryption and decryption with ECIES over the BLS12-381 curve.',
       url: 'https://github.com/rafagomes/ecies-bls12381',
     },
     {
       name: 'rfirewall',
-      description: 'A user-centric firewall for Linux systems, written in Rust.',
-      language: 'Rust',
+      kind: 'Rust',
+      description: 'A user-centric firewall for Linux.',
       url: 'https://github.com/rafagomes/rfirewall',
     },
   ],
-  // Real posts/topics from 0xrafasec.com (security research).
-  // Swap in AI-engineering writing here as you publish it.
+  // Topics published on 0xrafasec.com.
   writing: [
-    {
-      title: 'Detecting flash-loan-funded governance attacks with Forta bots',
-      topic: 'Blockchain security',
-    },
-    {
-      title: 'RAT communication and TLS-based evasion techniques',
-      topic: 'Malware analysis',
-    },
-    {
-      title: 'Writing effective bug reports for security triage',
-      topic: 'AppSec',
-    },
-    {
-      title: 'CVE deep-dives: real-world vulnerability research',
-      topic: 'Security research',
-    },
+    'Flash-loan governance attacks, detected with Forta bots',
+    'RAT communication and TLS-based evasion',
+    'Bug reports that survive security triage',
+    'CVE deep-dives',
   ],
+  stack: 'Go, Rust, Python, TypeScript, Node.js, React, Next.js, NestJS, AWS, CI/CD, EVM, Solana',
+  focus: 'Agentic systems, distributed systems, API & SDK design, protocol design, threat modeling',
   education: [
+    { credential: 'Postgraduate, Advanced Go Development', issuer: 'Full Cycle', period: '2024–2025' },
+    { credential: 'Ethical Hacker Nanodegree', issuer: 'Udacity', period: '2023' },
     {
-      credential: 'Postgraduate — Advanced Go (GoLang) Development',
-      issuer: 'Full Cycle',
-      period: '2024–2025',
-    },
-    {
-      credential: 'Graduation — Analysis & Systems Development',
+      credential: 'Technologist Degree, Systems Analysis & Development',
       issuer: 'Estácio',
       period: '2018–2021',
     },
   ],
   certifications: [
     { name: 'Go Expert', issuer: 'Full Cycle', year: '2025' },
-    { name: 'Ethical Hacker Nanodegree', issuer: 'Udacity', year: '2023' },
-    { name: 'CEH & Security Training Program', issuer: 'EH Academy', year: '2019' },
-    { name: 'ScrumMaster (K21)', issuer: 'Knowledge21', year: '2015' },
+    { name: 'CEH & Security Training', issuer: 'EH Academy', year: '2019' },
+    { name: 'Lead (leadership program)', issuer: 'ISE Business School', year: '2019' },
+    { name: 'ScrumMaster', issuer: 'K21', year: '2015' },
     { name: 'VTEX Interface Developer', issuer: 'VTEX', year: '2013' },
   ],
+  award: 'Intranet Design Annual Award (2013)',
+  languages: ['Portuguese, native', 'English, full professional'],
 };

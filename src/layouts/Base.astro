@@ -35,6 +35,8 @@ const personSchema = {
     'Agentic AI systems',
     'Multi-agent orchestration',
     'Large language model applications',
+    'Agentic AI in production',
+    'AI-native engineering teams',
     'Software engineering',
     'Engineering leadership',
     'Distributed systems',
@@ -48,6 +50,7 @@ const personSchema = {
     profile.links.github,
     profile.links.linkedin,
     profile.links.twitter,
+    profile.links.telegram,
     profile.links.blog,
   ],
   alumniOf: profile.education.map((e) => ({
@@ -75,7 +78,13 @@ const websiteSchema = {
     <meta name="author" content={profile.name} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta name="theme-color" content="#0a0e14" />
+    <meta name="theme-color" content="#1f3fe0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Inter+Tight:wght@400;700;800&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Open Graph -->
     <meta property="og:type" content="profile" />
