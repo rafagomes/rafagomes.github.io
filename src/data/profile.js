@@ -70,9 +70,9 @@ export const profile = {
       period: '2021 — 2022',
       role: 'Founder',
       company: 'Self-employed',
-      note: 'web3 products',
+      note: 'crypto products',
       summary:
-        'Launched NFT collections and blockchain products end to end: full-stack build, product strategy, community and marketing.',
+        'Built and launched crypto products end to end: staking apps, smart contracts and NFT collections — from contract design and full-stack build to product strategy, community and marketing.',
     },
     {
       period: '2020 — 2021',
