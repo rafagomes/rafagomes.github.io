@@ -8,7 +8,10 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const ogImage = new URL('/og.svg', Astro.site).href;
+// Social previews need a raster image: LinkedIn and X do not render SVG. og.png is
+// rendered from public/og.svg with headless Chrome.
+const ogImage = new URL('/og.png', Astro.site).href;
+const ogAlt = `${profile.name}, ${profile.title} at ${profile.company}: 25 engineers, 4 AI agents in production, 1M protocol users.`;
 
 // JSON-LD: Person schema. This is the primary signal AI answer engines and
 // search crawlers use to understand who Rafa is. Keep it aligned with profile.js.
@@ -92,6 +95,9 @@ const websiteSchema = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogAlt} />
     <meta property="og:locale" content="en_US" />
     <meta property="profile:first_name" content="Rafa" />
     <meta property="profile:last_name" content="Gomes" />
@@ -102,6 +108,7 @@ const websiteSchema = {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogAlt} />
     <meta name="twitter:creator" content={profile.twitterHandle} />
 
     <!-- Sitemap link for crawlers -->
