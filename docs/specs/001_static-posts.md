@@ -84,7 +84,7 @@ Post pages add:
 - **Client JS:** none added.
 
 ### Internal links
-Home nav gets `Writing`, and the home page gets a section with the latest 3 posts. The nav's existing rule hides all links but the last below 720px, so on phones the latest-posts section is the route to `/writing/`.
+Home nav gets `Writing`, and the home page gets a section with the latest 3 posts. Below 720px the nav hides its in-page anchors but keeps `Writing` and the PDF link.
 
 ### Empty state
 With zero published posts: no nav link and no home section, `/writing/` renders with `noindex` and is left out of the sitemap, and the RSS feed is valid but empty. This keeps `main` deployable before the first post.
