@@ -3,6 +3,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { isDraft } from './frontmatter.mjs';
 
 const walk = (dir) =>
   readdirSync(dir).flatMap((name) => {
@@ -36,7 +37,7 @@ const sitemapUrls = (dist) => {
 const draftSlugs = (postsDir) =>
   existsSync(postsDir)
     ? readdirSync(postsDir)
-        .filter((f) => f.endsWith('.md') && /^draft:\s*true\s*$/m.test(readFileSync(join(postsDir, f), 'utf8')))
+        .filter((f) => f.endsWith('.md') && isDraft(readFileSync(join(postsDir, f), 'utf8')))
         .map((f) => f.replace(/\.md$/, ''))
     : [];
 
@@ -115,7 +116,9 @@ export function checkSite({ dist, postsDir, site }) {
   for (const { url } of postPages) {
     const slug = new URL(url).pathname.split('/')[2];
     if (!existsSync(join(dist, 'writing', slug, 'og.png'))) fail(5, slug, 'missing og.png');
-    if (!existsSync(join(dist, 'writing', `${slug}.md`))) fail(5, slug, 'missing Markdown twin');
+    const twin = read(join(dist, 'writing', `${slug}.md`));
+    if (!twin) fail(5, slug, 'missing Markdown twin');
+    else if (!/^- Description: \S/m.test(twin)) fail(5, slug, 'Markdown twin has no description');
     if (!rss.includes(url)) fail(5, slug, 'missing from rss.xml');
     if (!llms.includes(url)) fail(5, slug, 'missing from llms.txt');
   }
@@ -123,8 +126,9 @@ export function checkSite({ dist, postsDir, site }) {
   // Rule 6: drafts leave no trace in any output.
   const textFiles = walk(dist).filter((f) => /\.(html|xml|txt|md)$/.test(f));
   for (const slug of draftSlugs(postsDir)) {
+    const reference = new RegExp(`/writing/${slug}(?![\\w-])`);
     for (const file of textFiles) {
-      if (read(file).includes(`/writing/${slug}`)) fail(6, relative(dist, file), `references draft ${slug}`);
+      if (reference.test(read(file))) fail(6, relative(dist, file), `references draft ${slug}`);
     }
     if (existsSync(join(dist, 'writing', slug))) fail(6, `writing/${slug}`, 'draft was built');
   }

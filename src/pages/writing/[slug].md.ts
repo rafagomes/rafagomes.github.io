@@ -8,10 +8,11 @@ export async function getStaticPaths() {
 }
 
 export function GET({ props: { post }, site }) {
-  const { title, summary, publishedAt, updatedAt } = post.data;
+  const { title, description, summary, publishedAt, updatedAt } = post.data;
   const header = [
     `# ${title}`,
     '',
+    `- Description: ${description}`,
     `- Author: ${profile.name} (${site.href})`,
     `- Published: ${isoDate(publishedAt)}`,
     ...(updatedAt ? [`- Updated: ${isoDate(updatedAt)}`] : []),

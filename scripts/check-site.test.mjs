@@ -32,10 +32,10 @@ const validFiles = () => ({
   'writing/index.html': page({ path: '/writing/' }),
   'writing/a/index.html': page({ path: '/writing/a/', ld: postLd }),
   'writing/a/og.png': 'png',
-  'writing/a.md': '# a',
+  'writing/a.md': '# a\n\n- Description: First post.',
   'writing/a-much-longer-slug/index.html': page({ path: '/writing/a-much-longer-slug/', ld: postLd }),
   'writing/a-much-longer-slug/og.png': 'png',
-  'writing/a-much-longer-slug.md': '# b',
+  'writing/a-much-longer-slug.md': '# b\n\n- Description: Second post.',
   'sitemap-index.xml': `<sitemap><loc>${site}/sitemap-0.xml</loc></sitemap>`,
   'sitemap-0.xml': sitemap(['/', '/writing/', '/writing/a/', '/writing/a-much-longer-slug/']),
   'rss.xml': `<link>${site}/writing/a/</link><link>${site}/writing/a-much-longer-slug/</link>`,
@@ -154,6 +154,12 @@ test('rule 5: post with no Markdown twin', () => {
   assertRule(run(files), 5, 'twin');
 });
 
+test('rule 5: Markdown twin without a description', () => {
+  const files = validFiles();
+  files['writing/a.md'] = '# a\n\n- Author: Someone';
+  assertRule(run(files), 5, 'no description');
+});
+
 test('rule 5: post missing from llms.txt', () => {
   const files = validFiles();
   files['llms.txt'] = `${site}/writing/a/`;
@@ -163,6 +169,16 @@ test('rule 5: post missing from llms.txt', () => {
 test('rule 6: draft slug present in rss.xml', () => {
   const files = validFiles();
   files['rss.xml'] += `<link>${site}/writing/secret/</link>`;
+  assertRule(run(files, { 'secret.md': '---\ndraft: true\n---\nbody' }), 6, 'secret');
+});
+
+test('rule 6: a draft slug that prefixes a published slug is not a match', () => {
+  assert.deepEqual(run(validFiles(), { 'a-much.md': '---\ndraft: true\n---\nbody' }), []);
+});
+
+test('rule 6: a draft reference at the end of the slug still matches', () => {
+  const files = validFiles();
+  files['llms.txt'] += ` ${site}/writing/secret.md`;
   assertRule(run(files, { 'secret.md': '---\ndraft: true\n---\nbody' }), 6, 'secret');
 });
 

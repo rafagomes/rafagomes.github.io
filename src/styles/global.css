@@ -147,7 +147,7 @@ footer ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: f
 .bio a { color: var(--accent); }
 .more-posts { max-width: 960px; padding-top: 96px; padding-bottom: 96px; }
 .more-posts h2 { margin-bottom: 24px; }
-.post + :not(.more-posts) { padding-bottom: 96px; }
+.post:last-child { padding-bottom: 96px; }
 
 @media (max-width: 1100px) {
   .band ul { grid-template-columns: repeat(3, 1fr); row-gap: 40px; }
