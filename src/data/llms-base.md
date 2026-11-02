@@ -57,4 +57,4 @@
 
 ## Contact
 
-Email rafa@rlabs.studio, or reach out via LinkedIn.
+Reach out via LinkedIn: https://www.linkedin.com/in/rafagomesdev
