@@ -1,0 +1,18 @@
+---
+import { formatDate, isoDate } from '../lib/seo.js';
+
+const { posts, heading = 'h2' } = Astro.props;
+const Heading = heading;
+---
+
+<ul class="post-list">
+  {posts.map((post) => (
+    <li>
+      <time datetime={isoDate(post.data.publishedAt)}>{formatDate(post.data.publishedAt)}</time>
+      <div>
+        <Heading><a href={`/writing/${post.id}/`}>{post.data.title}</a></Heading>
+        <p>{post.data.description}</p>
+      </div>
+    </li>
+  ))}
+</ul>
