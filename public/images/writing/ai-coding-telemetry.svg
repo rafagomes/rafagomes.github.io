@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="560" viewBox="0 0 480 560" role="img" aria-labelledby="t d" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" fill="#0b0b0c">
+  <title id="t">AI coding telemetry pipeline</title>
+  <desc id="d">Claude Code and Codex CLI send OTLP to an OTel Collector. The collector routes metrics to Prometheus and events to Loki. Grafana Alloy ships pod logs to Loki. Grafana reads both stores.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#55585e"/></marker>
+  </defs>
+  <rect width="480" height="560" fill="#fff"/>
+
+  <g fill="none" stroke="#55585e" stroke-width="1.5" marker-end="url(#a)">
+    <path d="M125 72V152"/>
+    <path d="M290 72V152"/>
+    <path d="M125 216V296"/>
+    <path d="M290 216V296"/>
+    <path d="M400 216V296"/>
+    <path d="M125 360V440"/>
+    <path d="M355 360V440"/>
+  </g>
+
+  <g fill="#fff" stroke="#0b0b0c" stroke-width="1.5">
+    <rect x="20" y="16" width="210" height="56"/>
+    <rect x="250" y="16" width="210" height="56"/>
+    <rect x="340" y="160" width="120" height="56"/>
+    <rect x="20" y="304" width="210" height="56"/>
+    <rect x="250" y="304" width="210" height="56"/>
+    <rect x="20" y="448" width="440" height="56"/>
+  </g>
+  <rect x="20" y="160" width="300" height="56" fill="#1f3fe0"/>
+
+  <g text-anchor="middle" font-weight="600">
+    <text x="125" y="50">Claude Code</text>
+    <text x="355" y="50">Codex CLI</text>
+    <text x="170" y="194" fill="#fff">OTel Collector</text>
+    <text x="400" y="194">Grafana Alloy</text>
+    <text x="125" y="338">Prometheus</text>
+    <text x="355" y="338">Loki</text>
+    <text x="240" y="482">Grafana</text>
+  </g>
+
+  <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace" font-size="13" fill="#55585e">
+    <text x="133" y="116">OTLP</text>
+    <text x="298" y="116">OTLP</text>
+    <text x="133" y="260">metrics</text>
+    <text x="298" y="260" text-anchor="start">events</text>
+    <text x="408" y="260">pod logs</text>
+    <text x="133" y="404">reads</text>
+    <text x="363" y="404">reads</text>
+  </g>
+</svg>

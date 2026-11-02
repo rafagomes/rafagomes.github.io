@@ -1,7 +1,11 @@
 ---
 // Layout follows the "Resume — Web" artboard in the Paper file "Resume".
 import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
 import { profile } from '../data/profile.js';
+import { getPublishedPosts } from '../lib/posts.js';
+
+const posts = await getPublishedPosts();
 
 const [featured, ...smallProjects] = profile.projects;
 const socials = [
@@ -13,7 +17,7 @@ const socials = [
 ];
 ---
 
-<Base>
+<Base ogType="profile">
   <a href="#main" class="skip-link">Skip to content</a>
 
   <div class="wrap">
@@ -23,6 +27,7 @@ const socials = [
         <li><a href="#impact">Impact</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#work">Work</a></li>
+        {posts.length > 0 && <li class="keep"><a href="/writing/">Writing</a></li>}
         <li><a class="cta" href="/resume.pdf" download>Download PDF ↓</a></li>
       </ul>
     </nav>
@@ -103,6 +108,16 @@ const socials = [
           </div>
         </div>
       </section>
+
+      {posts.length > 0 && (
+        <section class="latest" id="writing">
+          <div class="section-head">
+            <h2>Writing</h2>
+            <a class="label accent" href="/writing/">All posts →</a>
+          </div>
+          <PostList posts={posts.slice(0, 3)} heading="h3" />
+        </section>
+      )}
 
       <section class="details" aria-labelledby="details-title">
         <h2 id="details-title" class="visually-hidden">Skills and background</h2>

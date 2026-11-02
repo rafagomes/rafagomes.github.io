@@ -1,28 +1,34 @@
 ---
 import { profile } from '../data/profile.js';
+import { jsonLd } from '../lib/seo.js';
 import '../styles/global.css';
 
 const {
   title = `${profile.name} — ${profile.title} @ ${profile.company}`,
   description = profile.tagline,
+  ogType = 'website',
+  ogImage,
+  ogImageAlt,
+  noindex = false,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 // Social previews need a raster image: LinkedIn and X do not render SVG. og.png is
 // rendered from public/og.svg with headless Chrome.
-const ogImage = new URL('/og.png', Astro.site).href;
-const ogAlt = `${profile.name}, ${profile.title} at ${profile.company}: 25 engineers, 4 AI agents in production, 1M protocol users.`;
+const image = ogImage ?? new URL('/og.png', Astro.site).href;
+const imageAlt = ogImageAlt ?? `${profile.name}, ${profile.title} at ${profile.company}: 25 engineers, 4 AI agents in production, 1M protocol users.`;
 
 // JSON-LD: Person schema. This is the primary signal AI answer engines and
 // search crawlers use to understand who Rafa is. Keep it aligned with profile.js.
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': new URL('/#person', Astro.site).href,
   name: profile.name,
   alternateName: profile.handle,
   jobTitle: profile.title,
   description: profile.tagline,
-  url: canonical,
+  url: Astro.site?.href,
   worksFor: {
     '@type': 'Organization',
     name: profile.company,
@@ -80,6 +86,7 @@ const websiteSchema = {
     <meta name="description" content={description} />
     <meta name="author" content={profile.name} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="theme-color" content="#1f3fe0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -90,33 +97,39 @@ const websiteSchema = {
     />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="profile" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={ogAlt} />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:locale" content="en_US" />
-    <meta property="profile:first_name" content="Rafa" />
-    <meta property="profile:last_name" content="Gomes" />
-    <meta property="profile:username" content={profile.handle} />
+    {ogType === 'profile' && (
+      <>
+        <meta property="profile:first_name" content="Rafa" />
+        <meta property="profile:last_name" content="Gomes" />
+        <meta property="profile:username" content={profile.handle} />
+      </>
+    )}
 
     <!-- Twitter/X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
-    <meta name="twitter:image:alt" content={ogAlt} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content={imageAlt} />
     <meta name="twitter:creator" content={profile.twitterHandle} />
 
     <!-- Sitemap link for crawlers -->
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${profile.name} — Writing`} href="/rss.xml" />
 
     <!-- Structured data -->
-    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={jsonLd(personSchema)} />
+    <script type="application/ld+json" set:html={jsonLd(websiteSchema)} />
+    <slot name="head" />
   </head>
   <body>
     <slot />
